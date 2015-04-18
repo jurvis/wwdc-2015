@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */; };
+		280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */; };
+		280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21E1ADFB6280036B8B0 /* CompanyView.swift */; };
+		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
 		288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */; };
-		288A50AC1ADE04FC00B9DB7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50AB1ADE04FC00B9DB7B /* ViewController.swift */; };
-		288A50AF1ADE04FC00B9DB7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288A50AD1ADE04FC00B9DB7B /* Main.storyboard */; };
 		288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B01ADE04FC00B9DB7B /* Images.xcassets */; };
 		288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */; };
 		288A50C01ADE04FD00B9DB7B /* Jurvis_TanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50BF1ADE04FD00B9DB7B /* Jurvis_TanTests.swift */; };
+		288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50C91ADE057A00B9DB7B /* HomeViewController.swift */; };
+		288A50CC1ADE09C900B9DB7B /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */; };
+		288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */; };
+		288A50DE1ADE112100B9DB7B /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */; };
+		288A50DF1ADE112100B9DB7B /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */; };
+		288A50E01ADE112100B9DB7B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */; };
+		288A50E11ADE112100B9DB7B /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */; };
+		288A50E21ADE112100B9DB7B /* GenBkBasR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */; };
+		288A50E41ADE195B00B9DB7B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E31ADE195B00B9DB7B /* ContainerViewController.swift */; };
+		288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */; };
+		288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E81ADE4A8400B9DB7B /* TitleCard.swift */; };
+		288A50EB1ADE60BC00B9DB7B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EA1ADE60BC00B9DB7B /* AppView.swift */; };
+		288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */; };
+		28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */; };
+		28A09ED01AE10E05000C7E3B /* CardDetailPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */; };
+		28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */; };
+		28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */; };
+		28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */; };
+		28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED81AE11749000C7E3B /* HackathonCard.swift */; };
+		28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D854751AE21A9D007D7174 /* InterestsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +48,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonProjectsViewController.swift; sourceTree = "<group>"; };
+		280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
+		280FD21E1ADFB6280036B8B0 /* CompanyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		280FD2201ADFB6450036B8B0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		288A50A41ADE04FC00B9DB7B /* Jurvis Tan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jurvis Tan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50A81ADE04FC00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		288A50AB1ADE04FC00B9DB7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		288A50AE1ADE04FC00B9DB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		288A50B01ADE04FC00B9DB7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		288A50B31ADE04FC00B9DB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		288A50B91ADE04FD00B9DB7B /* Jurvis TanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jurvis TanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50BE1ADE04FD00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50BF1ADE04FD00B9DB7B /* Jurvis_TanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jurvis_TanTests.swift; sourceTree = "<group>"; };
+		288A50C91ADE057A00B9DB7B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalWorkViewController.swift; sourceTree = "<group>"; };
+		288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GenBkBasR.ttf; sourceTree = "<group>"; };
+		288A50E31ADE195B00B9DB7B /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		288A50E81ADE4A8400B9DB7B /* TitleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCard.swift; sourceTree = "<group>"; };
+		288A50EA1ADE60BC00B9DB7B /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalApp.swift; sourceTree = "<group>"; };
+		28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailPresentationController.swift; sourceTree = "<group>"; };
+		28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailPresentationManager.swift; sourceTree = "<group>"; };
+		28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentAnimator.swift; sourceTree = "<group>"; };
+		28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDismissAnimator.swift; sourceTree = "<group>"; };
+		28A09ED81AE11749000C7E3B /* HackathonCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonCard.swift; sourceTree = "<group>"; };
+		28D854751AE21A9D007D7174 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280FD2221ADFB64B0036B8B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				280FD2201ADFB6450036B8B0 /* Company.swift */,
+				288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		288A509B1ADE04FC00B9DB7B = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */,
-				288A50AB1ADE04FC00B9DB7B /* ViewController.swift */,
-				288A50AD1ADE04FC00B9DB7B /* Main.storyboard */,
+				288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */,
+				28A09ED51AE10F92000C7E3B /* Presentation */,
+				280FD2221ADFB64B0036B8B0 /* Model */,
+				288A50F01ADE6EFD00B9DB7B /* View */,
+				288A50E71ADE4A6B00B9DB7B /* View Controllers */,
 				288A50B01ADE04FC00B9DB7B /* Images.xcassets */,
 				288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */,
 				288A50A71ADE04FC00B9DB7B /* Supporting Files */,
@@ -90,6 +147,12 @@
 		288A50A71ADE04FC00B9DB7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */,
+				288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */,
+				288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */,
+				288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */,
+				288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */,
+				288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */,
 				288A50A81ADE04FC00B9DB7B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +173,43 @@
 				288A50BE1ADE04FD00B9DB7B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		288A50E71ADE4A6B00B9DB7B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				288A50E31ADE195B00B9DB7B /* ContainerViewController.swift */,
+				288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */,
+				288A50C91ADE057A00B9DB7B /* HomeViewController.swift */,
+				288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */,
+				280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */,
+				28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */,
+				280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */,
+				28D854751AE21A9D007D7174 /* InterestsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		288A50F01ADE6EFD00B9DB7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				288A50E81ADE4A8400B9DB7B /* TitleCard.swift */,
+				288A50EA1ADE60BC00B9DB7B /* AppView.swift */,
+				280FD21E1ADFB6280036B8B0 /* CompanyView.swift */,
+				28A09ED81AE11749000C7E3B /* HackathonCard.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		28A09ED51AE10F92000C7E3B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */,
+				28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */,
+				28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */,
+				28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */,
+			);
+			name = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +261,7 @@
 				TargetAttributes = {
 					288A50A31ADE04FC00B9DB7B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = EZ49532236;
 					};
 					288A50B81ADE04FD00B9DB7B = {
 						CreatedOnToolsVersion = 6.3;
@@ -192,7 +293,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288A50AF1ADE04FC00B9DB7B /* Main.storyboard in Resources */,
+				288A50DE1ADE112100B9DB7B /* OpenSans-ExtraBold.ttf in Resources */,
+				288A50DF1ADE112100B9DB7B /* OpenSans-Light.ttf in Resources */,
+				288A50E01ADE112100B9DB7B /* OpenSans-Regular.ttf in Resources */,
+				288A50E11ADE112100B9DB7B /* OpenSans-Semibold.ttf in Resources */,
+				288A50E21ADE112100B9DB7B /* GenBkBasR.ttf in Resources */,
 				288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */,
 				288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */,
 			);
@@ -212,8 +317,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288A50AC1ADE04FC00B9DB7B /* ViewController.swift in Sources */,
 				288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */,
+				288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */,
+				280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */,
+				288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */,
+				28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */,
+				288A50EB1ADE60BC00B9DB7B /* AppView.swift in Sources */,
+				288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */,
+				280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */,
+				288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */,
+				288A50E41ADE195B00B9DB7B /* ContainerViewController.swift in Sources */,
+				288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */,
+				28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */,
+				28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */,
+				280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */,
+				28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */,
+				280FD2211ADFB6450036B8B0 /* Company.swift in Sources */,
+				28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */,
+				28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */,
+				288A50CC1ADE09C900B9DB7B /* UIColor+AppColors.swift in Sources */,
+				28A09ED01AE10E05000C7E3B /* CardDetailPresentationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +359,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		288A50AD1ADE04FC00B9DB7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				288A50AE1ADE04FC00B9DB7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,9 +457,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jurvis Tan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -352,9 +471,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jurvis Tan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -411,6 +534,7 @@
 				288A50C51ADE04FD00B9DB7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		288A50C61ADE04FD00B9DB7B /* Build configuration list for PBXNativeTarget "Jurvis TanTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +543,7 @@
 				288A50C81ADE04FD00B9DB7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
