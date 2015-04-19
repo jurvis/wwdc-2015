@@ -10,10 +10,12 @@ import UIKit
 
 class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     var hackathonProjects : [String : PersonalApp]!
-
+    
+    var pageControl: UIPageControl!
     var containerView: UIView!
     var detailScrollView: UIScrollView!
     var imageScrollView: UIScrollView!
+    var closeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +33,20 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         imageScrollView.contentSize = CGSizeMake(imageScrollRect.width * 2, imageScrollRect.height)
         imageScrollView.pagingEnabled = true
         imageScrollView.delegate = self
+        imageScrollView.showsHorizontalScrollIndicator = false
         imageScrollView.addSubview(relayPlayHeroImageView)
         imageScrollView.addSubview(multitudeHeroImageView)
+        
+        self.pageControl = UIPageControl(frame: CGRectMake(0, CGRectGetMaxY(imageScrollView.frame) - 20, imageScrollView.frame.size.width, 20))
+        self.pageControl.numberOfPages = Int(imageScrollView.contentSize.width / imageScrollView.frame.size.width)
         
         let detailScrollViewRect: CGRect = CGRectMake(0, imageScrollRect.height, cardViewSize.width, cardViewSize.height - CGRectGetMaxY(imageScrollRect))
         detailScrollView = UIScrollView(frame: detailScrollViewRect)
         detailScrollView.contentSize = CGSizeMake(cardViewSize.width * 2, detailScrollViewRect.height)
         detailScrollView.pagingEnabled = true
         detailScrollView.scrollEnabled = false
-        detailScrollView.backgroundColor = UIColor.greenColor()
        
         var relayPlayCardView: HackathonCard = HackathonCard(frame: CGRectMake(0, 15, cardViewSize.width, detailScrollView.bounds.size.height))
-        relayPlayCardView.backgroundColor = UIColor.redColor()
         relayPlayCardView.titleLabel.text = hackathonProjects["RelayPlay"]?.subtitle
         
         let relayPlayDescParaStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
@@ -55,7 +59,6 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         
         var multitudeCardView: HackathonCard = HackathonCard(frame: CGRectMake(CGRectGetMaxX(relayPlayCardView.frame), 15, cardViewSize.width, detailScrollView.bounds.size.height))
         multitudeCardView.titleLabel.text = hackathonProjects["Multitude"]?.subtitle
-        multitudeCardView.backgroundColor = UIColor.blueColor()
 
         let multitudeDescParaStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         multitudeDescParaStyle.lineSpacing = 5;
@@ -70,23 +73,23 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         detailScrollView.addSubview(multitudeCardView)
         self.containerView.addSubview(self.imageScrollView)
         self.containerView.addSubview(self.detailScrollView)
+        self.containerView.addSubview(self.pageControl)
         self.view .addSubview(containerView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        var pageNumber = ceil(scrollView.contentOffset.x / (scrollView.frame.size.width))
+        self.pageControl.currentPage = Int(pageNumber)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         println(scrollView.contentOffset.x)
-        if scrollView.contentOffset.x > 130 {
-            var offset = (detailScrollView.frame.size.width / (imageScrollView.frame.size.width - 130)) * scrollView.contentOffset.x
+        if scrollView.contentOffset.x >= 130 {
+            var offset = ((imageScrollView.frame.size.width + 130.0) / detailScrollView.frame.size.width ) * imageScrollView.contentOffset.x
             detailScrollView.setContentOffset(CGPointMake(offset - 130, 0), animated: false)
-        }  else if scrollView.contentOffset.x <= -1 {
-            scrollView.scrollEnabled = false
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: false)
-            scrollView.scrollEnabled = true
+        } else if scrollView.contentOffset.x < 130 {
+            self.detailScrollView.setContentOffset(CGPointMake(0, 0), animated: false)
         }
 
     }

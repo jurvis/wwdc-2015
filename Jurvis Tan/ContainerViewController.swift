@@ -14,7 +14,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     var hackathonProjects: [String: PersonalApp]!
     var companies: [String: Company]!
     var pageViewController: UIPageViewController!
-    
+    var currentlyPresentedViewController: BaseViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
         
         let viewControllers: NSArray = [viewControllerObject]
         self.pageViewController!.setViewControllers(viewControllers as [AnyObject], direction: .Forward, animated: false, completion: nil)
-        
 
-        
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
@@ -45,7 +43,6 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
             }
         }
     }
-
     
     func viewControllerAtIndex(index: Int) -> BaseViewController {
         let vc : BaseViewController
@@ -74,11 +71,18 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
                 tempVC.workExperience = self.companies
                 tempVC.title = "Work Experience"
                 vc = tempVC
+            case 5:
+                let tempVC = InterestsViewController() as InterestsViewController
+                tempVC.title = "Interests"
+                vc = tempVC
+            case 6:
+                let tempVC = FinalViewController() as FinalViewController
+                vc = tempVC
             default:
                 vc = BaseViewController()
         }
         vc.indexNumber = index
-        
+        self.currentlyPresentedViewController = vc
         
         return vc
     }
@@ -102,7 +106,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
             let bvc: BaseViewController = viewController as! BaseViewController
             var index: Int = bvc.indexNumber!
             
-            if (index == 6) {
+            if (index == 7) {
                 return nil
             }
             
@@ -112,7 +116,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 6
+        return 7
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
@@ -125,13 +129,13 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     }
     
     func loadModel() {
-        let nebuloApp: PersonalApp = PersonalApp(title: "Nebulo", withSubtitle: "Beautiful Haze Reports For Singapore", andDescription: "Aiming to create an easy experience for people to check for the current Air Quality data during the haze season, Nebulo allows users to see the relevant information of the current air without browsing through menus to find the important information.\n\nI built a backend in Go that scrapes http://aqicn.org/ for PM2.5 and PSI data and stores it to be accessed by the iPhone app easily.", andAppIcon: UIImage(named: "nebulo_icon")!)
-        let exhibitGuideApp: PersonalApp = PersonalApp(title: "ExhibitGuide", withSubtitle: "Exhibits based on context", andDescription: "With the purpose of creating an app that fulfills the feature of existing audio tour systems, ExhibitGuide is an iOS app I've been working on at my current workplace which utilizes iBeacons to track and feed exhibit data to the user's phones.\n\nWith proximity information gathered from the iBeacons, this app allowed me to explore into displaying relevant UI based on the user’s real-world context; an interaction paradigm that I’m very interested in exploring into in my future apps.", andAppIcon: UIImage(named: "exhibitguide_icon")!)
+        let nebuloApp: PersonalApp = PersonalApp(title: "Nebulo", withSubtitle: "Beautiful Haze Reports For Singapore", andDescription: "Nebulo aims to create an effortless experience for users to check the current Air Quality data during haze season. It takes away the hassle of browsing through menus just to view the relevant data.\n\nI built a backend in Go that scrapes http://aqicn.org/ for PM2.5 and PSI data and stores it to be accessed by the iPhone app easily.", andAppIcon: UIImage(named: "nebulo_icon")!)
+        let exhibitGuideApp: PersonalApp = PersonalApp(title: "ExhibitGuide", withSubtitle: "Exhibits based on context", andDescription: "Created with the purpose of enhancing the feature of existing audio tour systems, ExhibitGuide is an iOS app I’ve been working on at buUuk which utilizes iBeacons to track and feed exhibit data to the user’s phones.\n\nWith proximity information gathered from the iBeacons, this app allowed me to look into displaying relevant UI based on the user’s real-world context; an interaction paradigm that I intend to probe further in my future apps.", andAppIcon: UIImage(named: "exhibitguide_icon")!)
         self.personalProjects = [nebuloApp.title: nebuloApp,
             exhibitGuideApp.title: exhibitGuideApp]
         
-        let relayPlayApp: PersonalApp = PersonalApp(title: "RelayPlay", withSubtitle: "SSC AngelHack AppHack 2013 Winner", andDescription: "Using the Bump API, RelayPlay was a project that takes on the challenge of making an app to “digitally engage” the audience during the upcoming 2015 SEA Games in Singapore.\n\nThe solution involves everyone to crowd-write a story. By allowing everyone to contribute two words to a story, each user will then “bump” on the next device to “pass the torch” - creating a digital torch relay that’s both interactive and personal.", andAppIcon: UIImage(named: "relayplay_icon")!)
-        let multitudeApp: PersonalApp = PersonalApp(title: "Multitude", withSubtitle: "CodeXtremeApps Hackathon '14 Finalist", andDescription: "In this hackathon project, we used Apple's iBeacon API, to build an app where a commuter will always receive a notification when leaving the train station asking about his/her commute experience.\n\n The app allowed us to create a discrete set of paramenters to solve  fragmented prose and make user feedback meaningful again where each station will receive a \"satisfaction score\".", andAppIcon: UIImage(named: "multitude_icon")!)
+        let relayPlayApp: PersonalApp = PersonalApp(title: "RelayPlay", withSubtitle: "SSC AngelHack AppHack 2013 Winner", andDescription: "Using the Bump API, RelayPlay was a project that took on the challenge of creating an app to “digitally engage” audiences during the upcoming 2015 SEA Games in Singapore.\n\nThe solution involved users to crowd-write a story. By allowing everyone to contribute two words to a story, each user will then “bump” on the next device to “pass the torch” - creating a digital torch relay that’s both interactive and personal.", andAppIcon: UIImage(named: "relayplay_icon")!)
+        let multitudeApp: PersonalApp = PersonalApp(title: "Multitude", withSubtitle: "CodeXtremeApps Hackathon '14 Finalist", andDescription: "Using the Bump API, RelayPlay was a project that took on the challenge of creating an app to “digitally engage” audiences during the upcoming 2015 SEA Games in Singapore.\n\nThe solution involved users to crowd-write a story. By allowing everyone to contribute two words to a story, each user will then “bump” on the next device to “pass the torch” - creating a digital torch relay that’s both interactive and personal.", andAppIcon: UIImage(named: "multitude_icon")!)
         
         self.hackathonProjects = [relayPlayApp.title: relayPlayApp,
             multitudeApp.title: multitudeApp]
