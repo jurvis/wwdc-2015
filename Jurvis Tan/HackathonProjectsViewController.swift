@@ -24,7 +24,7 @@ class HackathonProjectsViewController: BaseViewController {
         let screenRect: CGRect = UIScreen.mainScreen().bounds
     
         self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "OpenSans-Bold", size: 32)
+        self.titleLabel.font = UIFont(name: "OpenSans-Extrabold", size: 32)
         self.titleLabel.textColor = UIColor.greyTextColor()
         self.titleLabel.text = self.title?.uppercaseString
         self.titleLabel.sizeToFit()
@@ -45,10 +45,10 @@ class HackathonProjectsViewController: BaseViewController {
         self.descriptionTextLabel.textColor = UIColor.greyTextColor()
         self.descriptionTextLabel.textAlignment = NSTextAlignment.Center
 
-        let maxWidth: CGFloat = screenRect.size.width * 0.635
+        let maxWidth: CGFloat = screenRect.size.width * 0.692
         let descriptionTextLabelRect = descriptionTextLabel.attributedText.boundingRectWithSize(CGSizeMake(maxWidth, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), context:nil)
         self.descriptionTextLabel.numberOfLines = 0
-        self.descriptionTextLabel.frame = CGRectMake((screenRect.size.width - maxWidth) / 2, CGRectGetMaxY(self.titleLabel.frame) + (screenRect.size.height * 0.13), maxWidth, descriptionTextLabelRect.size.height)
+        self.descriptionTextLabel.frame = CGRectMake((screenRect.size.width - maxWidth) / 2, CGRectGetMaxY(self.titleLabel.frame) + (screenRect.size.height * 0.11), maxWidth, descriptionTextLabelRect.size.height)
         
         
         let appIconYPos: CGFloat = CGRectGetMaxY(self.descriptionTextLabel.frame) + 16

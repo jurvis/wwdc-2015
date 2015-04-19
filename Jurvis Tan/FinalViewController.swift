@@ -9,6 +9,7 @@
 import UIKit
 
 class FinalViewController: BaseViewController {
+    let detailTransitioningDelegate: CardDetailPresentationManager = CardDetailPresentationManager()
     
     var thankYouLabel: UILabel!
     var underlineView: UIView!
@@ -51,11 +52,25 @@ class FinalViewController: BaseViewController {
         bodyTextView.transform = CGAffineTransformMakeTranslation(0, -10)
         bodyTextView.alpha = 0.0
         
+        webButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        webButton.setImage(UIImage(named: "web_btn"), forState: UIControlState.Normal)
+        webButton.setImage(UIImage(named: "web_btn_selected"), forState: UIControlState.Highlighted)
+        webButton.addTarget(self, action: "openWebSite", forControlEvents: UIControlEvents.TouchUpInside)
+        webButton.frame = CGRectMake(CGRectGetMaxX(bodyTextView.frame) - 127.5, CGRectGetMaxY(bodyTextView.frame) - 35.5, 127.5, 35.5)
+        
         
         self.view.addSubview(thankYouLabel)
         self.view.addSubview(underlineView)
         self.view.addSubview(wwdcImage)
         self.view.addSubview(bodyTextView)
+        self.view.addSubview(webButton)
+    }
+    
+    func openWebSite() {
+        var webViewController = WebViewController()
+        webViewController.transitioningDelegate = detailTransitioningDelegate
+        webViewController.modalPresentationStyle = .Custom
+        self.presentViewController(webViewController, animated: true, completion: nil)
     }
     
     override func viewDidAppear(animated: Bool) {

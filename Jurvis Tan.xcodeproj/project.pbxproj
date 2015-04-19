@@ -42,6 +42,7 @@
 		28B667451AE2A03700F19A22 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667441AE2A03600F19A22 /* Reachability.swift */; };
 		28B667471AE2A9AF00F19A22 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */; };
 		28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675A1AE3734800F19A22 /* FinalViewController.swift */; };
+		28B6675D1AE386AF00F19A22 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675C1AE386AF00F19A22 /* WebViewController.swift */; };
 		28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D854751AE21A9D007D7174 /* InterestsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		28B667441AE2A03600F19A22 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		28B6675A1AE3734800F19A22 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		28B6675C1AE386AF00F19A22 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		28D854751AE21A9D007D7174 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,7 @@
 				28D854751AE21A9D007D7174 /* InterestsViewController.swift */,
 				28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */,
 				28B6675A1AE3734800F19A22 /* FinalViewController.swift */,
+				28B6675C1AE386AF00F19A22 /* WebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */,
 				280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */,
 				2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */,
+				28B6675D1AE386AF00F19A22 /* WebViewController.swift in Sources */,
 				288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */,
 				288A50E41ADE195B00B9DB7B /* ContainerViewController.swift in Sources */,
 				288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */,

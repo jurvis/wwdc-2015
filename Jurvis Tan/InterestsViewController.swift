@@ -21,7 +21,9 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.getImages()
+        if photoArray.count == 0 {
+            self.getImages()
+        }
     }
     
     override func viewDidLoad() {

@@ -84,7 +84,6 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        println(scrollView.contentOffset.x)
         if scrollView.contentOffset.x >= 130 {
             var offset = ((imageScrollView.frame.size.width + 130.0) / detailScrollView.frame.size.width ) * imageScrollView.contentOffset.x
             detailScrollView.setContentOffset(CGPointMake(offset - 130, 0), animated: false)
