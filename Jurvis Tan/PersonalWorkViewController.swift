@@ -16,14 +16,6 @@ class PersonalWorkViewController: BaseViewController {
     var applicationImageView: UIImageView!
     let screenRect: CGRect  = UIScreen.mainScreen().bounds
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let screenRect: CGRect  = UIScreen.mainScreen().bounds
-        
-
-    }
-    
     override func viewDidLoad() {
         self.applicationDetail = AppView()
         self.applicationImageView = UIImageView()

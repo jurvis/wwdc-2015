@@ -106,7 +106,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
             let bvc: BaseViewController = viewController as! BaseViewController
             var index: Int = bvc.indexNumber!
             
-            if (index == 7) {
+            if (index == 6) {
                 return nil
             }
             
@@ -116,7 +116,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 7
+        return 6
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

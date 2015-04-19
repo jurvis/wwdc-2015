@@ -95,11 +95,21 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoViewCell", forIndexPath: indexPath) as! PhotoViewCell
+        cell.alpha = 0.0
         let photo: NSDictionary = self.photoArray[indexPath.row] as! NSDictionary
         
         let url = self.getPhotoUrl(photo, forSize: "c")
+        let request = NSURLRequest(URL: url)
         
-        cell.imageView.setImageWithUrl(url, placeHolderImage: UIImage(named: "image_placeholder"))
+        cell.imageView.setImageWithUrlRequest(request, placeHolderImage: UIImage(named: "image_placeholder"), success: { (request, response, image) -> Void in
+                cell.imageView.image = image
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    cell.alpha = 1.0
+                })
+            }, failure: { (request, response, error) -> Void in
+                //code
+            })
+        
         return cell
     }
     
