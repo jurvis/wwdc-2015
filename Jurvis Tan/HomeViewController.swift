@@ -12,6 +12,14 @@ class HomeViewController: BaseViewController {
     
     var containerView: TitleCard! = nil
     var backgroundImageView: UIImageView!
+    var swipeLabel: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.runFloatAnimationOnView(swipeLabel, withDisplacement: 10.0)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +33,12 @@ class HomeViewController: BaseViewController {
         let arrowSize: CGSize = CGSizeMake(55, 27.5)
         arrowView.frame = CGRectMake((screenRect.size.width - arrowSize.width) / 2, screenRect.size.height - 30.5 - arrowSize.height, arrowSize.width, arrowSize.height)
         
-        let swipeLabel: UILabel = UILabel(frame: CGRectMake(0, 0, 0, 0))
+        swipeLabel = UILabel(frame: CGRectMake(0, 0, 0, 0))
         swipeLabel.text = "Swipe Down"
         swipeLabel.font = UIFont(name: "OpenSans-Semibold", size: 20)
         swipeLabel.textColor = UIColor.subOrangeTextColor()
         swipeLabel.sizeToFit()
-        swipeLabel.frame.origin = CGPointMake((screenRect.size.width - swipeLabel.frame.size.width) / 2, CGRectGetMinY(arrowView.frame) - 17.5 - swipeLabel.frame.size.height)
+        swipeLabel.frame.origin = CGPointMake((screenRect.size.width - swipeLabel.frame.size.width) / 2, CGRectGetMinY(arrowView.frame) - 12 - swipeLabel.frame.size.height)
         
         self.backgroundImageView = UIImageView(frame: CGRectMake(0, 0, screenRect.size.width * 2, screenRect.size.width * 2))
         self.backgroundImageView.image = UIImage(named: "title_background")
@@ -51,6 +59,8 @@ class HomeViewController: BaseViewController {
         self.view.addSubview(arrowView)
         self.view.addSubview(self.containerView)
         
+        
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"adjustBackgroundImage:", name: "scrollViewScrolled", object: nil)
     }
     
@@ -59,6 +69,23 @@ class HomeViewController: BaseViewController {
         
         
     }
+    
+    
+    func runFloatAnimationOnView(view: UIView, withDisplacement displacement: CGFloat) {
+        let fromValue = view.layer.frame.origin.y
+        let toValue = view.layer.frame.origin.y - displacement
+        
+        
+        let floatAnimation: CABasicAnimation
+        floatAnimation = CABasicAnimation(keyPath: "position.y")
+        floatAnimation.fromValue = fromValue
+        floatAnimation.toValue = toValue
+        floatAnimation.autoreverses = true
+        floatAnimation.duration = 1.5
+        floatAnimation.repeatCount = Float.infinity
+        view.layer.addAnimation(floatAnimation, forKey: "floatAnimation")
+    }
+    
     
     func adjustBackgroundImage(notification: NSNotification) {
         var y = notification.object as! CGFloat

@@ -14,6 +14,7 @@ class PhotoViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.imageView = UIImageView()
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         
         self.contentView.addSubview(self.imageView)
     }

@@ -73,9 +73,11 @@ class PersonalWorkViewController: BaseViewController {
             self.applicationDetail.transform = CGAffineTransformMakeTranslation(0, -10)
         })
         
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             self.applicationImageView.frame = CGRectMake(screenRect.size.width * 0.07, screenRect.size.height * 0.169, 360, 582.5)
+
         }, completion: nil)
+
 
 
         
@@ -85,7 +87,7 @@ class PersonalWorkViewController: BaseViewController {
         super.viewDidDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "scrollViewScrolled", object: nil)
     }
-    
+
     func viewExiting(notification: NSNotification){
         var y = notification.object as! CGFloat
         var applicationImageViewFromFrame: CGRect =  self.applicationImageView.frame

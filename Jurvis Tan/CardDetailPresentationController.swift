@@ -10,6 +10,7 @@ import UIKit
 
 class CardDetailPresentationController: UIPresentationController {
     var dimmingView: UIView!
+
     
     override init(presentedViewController: UIViewController!, presentingViewController: UIViewController!) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)

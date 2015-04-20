@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class InterestsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    let detailTransitioningDelegate: PhotoDetailPresentationManager = PhotoDetailPresentationManager()
+
     
     var photoArray: Array<AnyObject> = []
     var titleIcon: UIImageView!
@@ -113,6 +115,24 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
             })
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let photo: NSDictionary = self.photoArray[indexPath.row] as! NSDictionary
+        
+        var detailViewController = PhotoDetailViewController()
+        detailViewController.transitioningDelegate = detailTransitioningDelegate
+        detailViewController.modalPresentationStyle = .Custom
+        
+        let url = self.getPhotoUrl(photo, forSize: "b")
+        detailViewController.imageURL = url
+
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotoViewCell
+        var selectedCellRect = self.view.convertRect(selectedCell.frame, fromView: self.photoGallery!)
+        detailViewController.prevCellRect = selectedCellRect
+        detailViewController.viewControllerIndex = self.indexNumber
+        
+        self.presentViewController(detailViewController, animated: true, completion: nil)
     }
     
     func getPhotoUrl(photo: NSDictionary, forSize size: NSString) -> NSURL {

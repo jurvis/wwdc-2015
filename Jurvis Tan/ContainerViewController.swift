@@ -142,7 +142,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
         
         
         let carousell: Company = Company(companyName: "Carousell", andCompanyPosition: "Developer Intern", andDateRange: "Nov \'13 - Mar \'14", andJobDescription: "Wrote front-end technologies at Carousell and worked on internal operation tools with Go, Python & SQL.", withCompanyLogo: UIImage(named: "carousell_logo")!)
-        let buuuk : Company = Company(companyName: "buUuk", andCompanyPosition: "iOS Intern", andDateRange: "Mar \'15 - May \'15)", andJobDescription: "iOS Developer at buUuk - an app development studio. Developed “ExhibitGuide” as an internal project for clients.", withCompanyLogo: UIImage(named: "buuuk_logo")!)
+        let buuuk : Company = Company(companyName: "buUuk", andCompanyPosition: "iOS Intern", andDateRange: "Mar \'15 - May \'15", andJobDescription: "iOS Developer at buUuk - an app development studio. Developed “ExhibitGuide” as an internal project for clients.", withCompanyLogo: UIImage(named: "buuuk_logo")!)
         self.companies = [carousell.companyName : carousell,
             buuuk.companyName: buuuk]
     }

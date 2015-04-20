@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */; };
+		2805F4DF1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */; };
+		2805F4E31AE3EAE1005E5A31 /* PhotoPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */; };
+		2805F4E51AE3EAEA005E5A31 /* PhotoDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */; };
 		280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */; };
 		280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21E1ADFB6280036B8B0 /* CompanyView.swift */; };
 		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
@@ -102,6 +105,9 @@
 /* Begin PBXFileReference section */
 		280169B21AE27F7B0017DCAB /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonProjectsViewController.swift; sourceTree = "<group>"; };
+		2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresentationManager.swift; sourceTree = "<group>"; };
+		2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPresentAnimator.swift; sourceTree = "<group>"; };
+		2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDismissAnimator.swift; sourceTree = "<group>"; };
 		280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
 		280FD21E1ADFB6280036B8B0 /* CompanyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		280FD2201ADFB6450036B8B0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -281,10 +287,13 @@
 		28A09ED51AE10F92000C7E3B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */,
 				28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */,
+				28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */,
 				28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */,
 				28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */,
+				2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */,
+				2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */,
+				2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -433,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2805F4E51AE3EAEA005E5A31 /* PhotoDismissAnimator.swift in Sources */,
 				28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */,
 				288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */,
 				288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */,
@@ -451,6 +461,8 @@
 				28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */,
 				28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */,
 				280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */,
+				2805F4DF1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift in Sources */,
+				2805F4E31AE3EAE1005E5A31 /* PhotoPresentAnimator.swift in Sources */,
 				28B667451AE2A03700F19A22 /* Reachability.swift in Sources */,
 				28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */,
 				280FD2211ADFB6450036B8B0 /* Company.swift in Sources */,
