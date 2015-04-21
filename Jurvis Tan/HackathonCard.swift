@@ -19,7 +19,8 @@ class HackathonCard: UIView {
         descriptionTextWidth = frame.size.width * 0.7
         super.init(frame: frame)
         titleLabel = UILabel(frame: CGRectMake(28, 0, 0, 0))
-        titleLabel.font = UIFont(name: "OpenSans-Semibold", size: 25)
+        titleLabel.font = UIFont(name: "WhitneyHTF-SemiBold", size: 25)
+        titleLabel.textColor = UIColor.headerGreyTextColor()
         
         descriptionTextView = UITextView(frame: CGRectMake(28, CGRectGetMaxY(titleLabel.frame), descriptionTextWidth, 188))
         self.descriptionTextView.selectable = false

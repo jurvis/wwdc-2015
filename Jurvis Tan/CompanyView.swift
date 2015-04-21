@@ -21,16 +21,16 @@ class CompanyView: UIView {
         super.init(frame: frame)
         
         self.positionTitleLabel.frame = CGRectMake(0, 0, 0, 0)
-        self.positionTitleLabel.font = UIFont(name: "OpenSans-Semibold", size: 32)
+        self.positionTitleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
         self.positionTitleLabel.textColor = UIColor.greyTextColor()
         
         self.companyNameAndDurationLabel.frame = CGRectMake(0, CGRectGetMaxY(self.positionTitleLabel.frame), 0, 0)
-        self.companyNameAndDurationLabel.font = UIFont(name: "OpenSans-Semibold", size: 21)
+        self.companyNameAndDurationLabel.font = UIFont(name: "WhitneyHTF-SemiBold", size: 21)
         self.companyNameAndDurationLabel.textColor = UIColor.subGreyTextColor()
         
         
         self.jobDescriptionLabel.frame = CGRectMake(0, CGRectGetMaxY(self.companyNameAndDurationLabel.frame),frame.size.width, 0)
-        self.jobDescriptionLabel.font = UIFont(name: "OpenSans", size: 21)
+        self.jobDescriptionLabel.font = UIFont(name: "WhitneyHTF-Book", size: 21)
         self.jobDescriptionLabel.textColor = UIColor.subGreyTextColor()
         self.jobDescriptionLabel.numberOfLines = 0
         self.jobDescriptionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping

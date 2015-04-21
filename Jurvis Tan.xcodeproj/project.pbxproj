@@ -14,7 +14,6 @@
 		280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */; };
 		280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21E1ADFB6280036B8B0 /* CompanyView.swift */; };
 		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
-		2830923A1AE266B2005AB9A9 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */; };
 		2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */; };
 		2849F5331AE5C1E3007A3487 /* PhotoDismissInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */; };
 		2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,15 +25,9 @@
 		288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50C91ADE057A00B9DB7B /* HomeViewController.swift */; };
 		288A50CC1ADE09C900B9DB7B /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */; };
 		288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */; };
-		288A50DE1ADE112100B9DB7B /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */; };
-		288A50DF1ADE112100B9DB7B /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */; };
-		288A50E01ADE112100B9DB7B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */; };
-		288A50E11ADE112100B9DB7B /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */; };
-		288A50E21ADE112100B9DB7B /* GenBkBasR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */; };
 		288A50E41ADE195B00B9DB7B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E31ADE195B00B9DB7B /* ContainerViewController.swift */; };
 		288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */; };
 		288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E81ADE4A8400B9DB7B /* TitleCard.swift */; };
-		288A50EB1ADE60BC00B9DB7B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EA1ADE60BC00B9DB7B /* AppView.swift */; };
 		288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */; };
 		288D3C771AE52B4F00EF444F /* UIImageView+AFNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D3C761AE52B4F00EF444F /* UIImageView+AFNetworking.swift */; };
 		28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */; };
@@ -48,6 +41,11 @@
 		28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675A1AE3734800F19A22 /* FinalViewController.swift */; };
 		28B6675D1AE386AF00F19A22 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675C1AE386AF00F19A22 /* WebViewController.swift */; };
 		28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D854751AE21A9D007D7174 /* InterestsViewController.swift */; };
+		28E499B81AE6618D00AA0C65 /* Mercury-TextG1Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */; };
+		28E499B91AE6618D00AA0C65 /* WhitneyHTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B21AE6617B00AA0C65 /* WhitneyHTF-Bold.otf */; };
+		28E499BA1AE6618D00AA0C65 /* WhitneyHTF-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */; };
+		28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */; };
+		28E499BF1AE67DE700AA0C65 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E499BE1AE67DE700AA0C65 /* AppTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +110,6 @@
 		280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
 		280FD21E1ADFB6280036B8B0 /* CompanyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		280FD2201ADFB6450036B8B0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
 		2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDismissInteractor.swift; sourceTree = "<group>"; };
 		288A50A41ADE04FC00B9DB7B /* Jurvis Tan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jurvis Tan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,15 +123,9 @@
 		288A50C91ADE057A00B9DB7B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalWorkViewController.swift; sourceTree = "<group>"; };
-		288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GenBkBasR.ttf; sourceTree = "<group>"; };
 		288A50E31ADE195B00B9DB7B /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		288A50E81ADE4A8400B9DB7B /* TitleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCard.swift; sourceTree = "<group>"; };
-		288A50EA1ADE60BC00B9DB7B /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalApp.swift; sourceTree = "<group>"; };
 		288D3C761AE52B4F00EF444F /* UIImageView+AFNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AFNetworking.swift"; sourceTree = "<group>"; };
 		28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailPresentationController.swift; sourceTree = "<group>"; };
@@ -148,6 +139,11 @@
 		28B6675A1AE3734800F19A22 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		28B6675C1AE386AF00F19A22 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		28D854751AE21A9D007D7174 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mercury-TextG1Roman.otf"; sourceTree = "<group>"; };
+		28E499B21AE6617B00AA0C65 /* WhitneyHTF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-Bold.otf"; sourceTree = "<group>"; };
+		28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-Book.otf"; sourceTree = "<group>"; };
+		28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-SemiBold.otf"; sourceTree = "<group>"; };
+		28E499BE1AE67DE700AA0C65 /* AppTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,12 +224,10 @@
 		288A50A71ADE04FC00B9DB7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */,
-				288A50D91ADE10EF00B9DB7B /* OpenSans-ExtraBold.ttf */,
-				288A50DA1ADE10EF00B9DB7B /* OpenSans-Light.ttf */,
-				288A50DB1ADE10EF00B9DB7B /* OpenSans-Regular.ttf */,
-				288A50DC1ADE10EF00B9DB7B /* OpenSans-Semibold.ttf */,
-				288A50DD1ADE110800B9DB7B /* GenBkBasR.ttf */,
+				28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */,
+				28E499B21AE6617B00AA0C65 /* WhitneyHTF-Bold.otf */,
+				28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */,
+				28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */,
 				288A50A81ADE04FC00B9DB7B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -278,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				288A50E81ADE4A8400B9DB7B /* TitleCard.swift */,
-				288A50EA1ADE60BC00B9DB7B /* AppView.swift */,
+				28E499BE1AE67DE700AA0C65 /* AppTitle.swift */,
 				280FD21E1ADFB6280036B8B0 /* CompanyView.swift */,
 				28A09ED81AE11749000C7E3B /* HackathonCard.swift */,
 				2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */,
@@ -420,12 +414,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2830923A1AE266B2005AB9A9 /* OpenSans-Bold.ttf in Resources */,
-				288A50DE1ADE112100B9DB7B /* OpenSans-ExtraBold.ttf in Resources */,
-				288A50DF1ADE112100B9DB7B /* OpenSans-Light.ttf in Resources */,
-				288A50E01ADE112100B9DB7B /* OpenSans-Regular.ttf in Resources */,
-				288A50E11ADE112100B9DB7B /* OpenSans-Semibold.ttf in Resources */,
-				288A50E21ADE112100B9DB7B /* GenBkBasR.ttf in Resources */,
+				28E499B81AE6618D00AA0C65 /* Mercury-TextG1Roman.otf in Resources */,
+				28E499B91AE6618D00AA0C65 /* WhitneyHTF-Bold.otf in Resources */,
+				28E499BA1AE6618D00AA0C65 /* WhitneyHTF-Book.otf in Resources */,
+				28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */,
 				288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */,
 				288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */,
 			);
@@ -452,10 +444,10 @@
 				280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */,
 				288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */,
 				28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */,
-				288A50EB1ADE60BC00B9DB7B /* AppView.swift in Sources */,
 				28B667471AE2A9AF00F19A22 /* PhotoDetailViewController.swift in Sources */,
 				288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */,
 				280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */,
+				28E499BF1AE67DE700AA0C65 /* AppTitle.swift in Sources */,
 				2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */,
 				28B6675D1AE386AF00F19A22 /* WebViewController.swift in Sources */,
 				288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */,

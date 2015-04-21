@@ -54,7 +54,7 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         relayPlayDescParaStyle.lineSpacing = 5;
         relayPlayCardView.descriptionTextView.attributedText = NSAttributedString(string: hackathonProjects["RelayPlay"]!.appDescription!,
             attributes: [
-                NSFontAttributeName: UIFont(name: "GentiumBookBasic", size: 18)!,
+                NSFontAttributeName: UIFont(name: "Mercury-TextG1Roman", size: 18)!,
                 NSParagraphStyleAttributeName: relayPlayDescParaStyle
             ])
         
@@ -65,7 +65,7 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         multitudeDescParaStyle.lineSpacing = 5;
         multitudeCardView.descriptionTextView.attributedText = NSAttributedString(string: hackathonProjects["Multitude"]!.appDescription!,
             attributes: [
-                NSFontAttributeName: UIFont(name: "GentiumBookBasic", size: 18)!,
+                NSFontAttributeName: UIFont(name: "Mercury-TextG1Roman", size: 18)!,
                 NSParagraphStyleAttributeName: multitudeDescParaStyle
             ])
         

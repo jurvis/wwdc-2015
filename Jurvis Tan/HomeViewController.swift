@@ -35,7 +35,7 @@ class HomeViewController: BaseViewController {
         
         swipeLabel = UILabel(frame: CGRectMake(0, 0, 0, 0))
         swipeLabel.text = "Swipe Down"
-        swipeLabel.font = UIFont(name: "OpenSans-Semibold", size: 20)
+        swipeLabel.font = UIFont(name: "WhitneyHTF-SemiBold", size: 20)
         swipeLabel.textColor = UIColor.subOrangeTextColor()
         swipeLabel.sizeToFit()
         swipeLabel.frame.origin = CGPointMake((screenRect.size.width - swipeLabel.frame.size.width) / 2, CGRectGetMinY(arrowView.frame) - 12 - swipeLabel.frame.size.height)
@@ -58,8 +58,6 @@ class HomeViewController: BaseViewController {
         self.view.addSubview(swipeLabel)
         self.view.addSubview(arrowView)
         self.view.addSubview(self.containerView)
-        
-        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"adjustBackgroundImage:", name: "scrollViewScrolled", object: nil)
     }

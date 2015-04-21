@@ -12,38 +12,43 @@ class PersonalWorkViewController: BaseViewController {
     
     var imageName: String?
     var app: PersonalApp!
-    var applicationDetail: AppView!
+    var applicationDetail: UIView!
+    var applicationTitle: AppTitle!
+    var appDescriptionTextView: UITextView!
     var applicationImageView: UIImageView!
     let screenRect: CGRect  = UIScreen.mainScreen().bounds
     
     override func viewDidLoad() {
-        self.applicationDetail = AppView()
         self.applicationImageView = UIImageView()
         super.viewDidLoad()
         
         let screenRect: CGRect  = UIScreen.mainScreen().bounds
         
         let applicationDetailHeight: CGFloat = screenRect.size.height * 0.677
-        self.applicationDetail  = AppView(frame: CGRectMake(screenRect.size.width * 0.473, (screenRect.size.height - applicationDetailHeight) / 2, screenRect.size.width * 0.424, applicationDetailHeight))
         
-        self.applicationDetail.titleLabel.text = app.title
-        self.applicationDetail.subtitleLabel.text = app.subtitle
-        self.applicationDetail.appIconView.image = app.appIcon
+        applicationTitle = AppTitle(frame:  CGRectMake(0, 0, screenRect.size.width * 0.424, 150))
+        applicationTitle.appTitleLabel.text = app.title
+        applicationTitle.appSubtitleLabel.text = app.subtitle
+        applicationTitle.appIconView.image = app.appIcon
+        
+        appDescriptionTextView = UITextView(frame: CGRectMake(0, CGRectGetMaxY(applicationTitle.frame) + 25, applicationTitle.frame.size.width, 0))
+        appDescriptionTextView.backgroundColor = UIColor.clearColor()
+        appDescriptionTextView.selectable = false
         
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 7;
-        let attrb: NSDictionary = [NSFontAttributeName: UIFont(name: "GentiumBookBasic", size: 18)!,
+        let attrb: NSDictionary = [NSFontAttributeName: UIFont(name: "Mercury-TextG1Roman", size: 17.5)!,
             NSParagraphStyleAttributeName: paragraphStyle]
-        self.applicationDetail.appDescriptionTextView.attributedText = NSAttributedString(string: app.appDescription, attributes: attrb as [NSObject : AnyObject])
-        
+        appDescriptionTextView.attributedText = NSAttributedString(string: app.appDescription, attributes: attrb as [NSObject : AnyObject])
+
         let descriptionText: NSString = app.appDescription as NSString
-        let descriptionCellRect: CGRect = descriptionText.boundingRectWithSize(CGSizeMake(self.view.frame.size.width - 40, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), attributes: attrb as [NSObject : AnyObject], context: nil)
-        self.applicationDetail.appDescriptionTextView.frame.size = CGSizeMake(self.applicationDetail.frame.size.width, self.applicationDetail.frame.height - self.applicationDetail.frame.origin.y)
+        let descriptionCellRect: CGRect = descriptionText.boundingRectWithSize(CGSizeMake(appDescriptionTextView.frame.size.width - 40, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), attributes: attrb as [NSObject : AnyObject], context: nil)
+        appDescriptionTextView.frame = CGRectMake(appDescriptionTextView.frame.origin.x, appDescriptionTextView.frame.origin.y, applicationTitle.frame.size.width, descriptionCellRect.size.height + (18 * 1.125))
         
-        self.applicationImageView.frame = CGRectMake(-360, screenRect.size.height * 0.169, 360, 582.5)
-        
-        self.applicationDetail.alpha = 0.0;
-        self.applicationDetail.transform = CGAffineTransformMakeTranslation(0, 10);
+        applicationDetail = UIView(frame: CGRectUnion(applicationTitle.frame, appDescriptionTextView.frame))
+        applicationDetail.addSubview(applicationTitle)
+        applicationDetail.addSubview(appDescriptionTextView)
+        applicationDetail.frame.origin = CGPointMake(screenRect.size.width * 0.47, ( screenRect.size.height - applicationDetail.frame.size.height ) / 2)
         
         
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
@@ -55,8 +60,13 @@ class PersonalWorkViewController: BaseViewController {
             })
         })
         
-
+        applicationImageView.frame = CGRectMake(-360, ( screenRect.size.height - 582.5 ) / 2, 360, 582.5)
         
+        applicationDetail.alpha = 0.0;
+        applicationDetail.transform = CGAffineTransformMakeTranslation(0, 10);
+        
+
+        self.view.addSubview(applicationDetail)
         self.view.addSubview(self.applicationImageView)
         self.view.addSubview(self.applicationDetail)
     }
@@ -74,7 +84,7 @@ class PersonalWorkViewController: BaseViewController {
         })
         
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-            self.applicationImageView.frame = CGRectMake(screenRect.size.width * 0.07, screenRect.size.height * 0.169, 360, 582.5)
+            self.applicationImageView.frame = CGRectMake(screenRect.size.width * 0.07, self.applicationImageView.frame.origin.y, 360, 582.5)
 
         }, completion: nil)
 

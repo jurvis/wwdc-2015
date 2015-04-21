@@ -24,7 +24,7 @@ class HackathonProjectsViewController: BaseViewController {
         let screenRect: CGRect = UIScreen.mainScreen().bounds
     
         self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "OpenSans-Extrabold", size: 32)
+        self.titleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
         self.titleLabel.textColor = UIColor.greyTextColor()
         self.titleLabel.text = self.title?.uppercaseString
         self.titleLabel.sizeToFit()
@@ -39,7 +39,7 @@ class HackathonProjectsViewController: BaseViewController {
         paragraphStyle.lineSpacing = 7;
         self.descriptionTextLabel.attributedText = NSAttributedString(string: "Exploring new technologies fuels my passion in app development, hackathons provide the perfect opportunities for me to tinker and discover them.",
             attributes: [
-                NSFontAttributeName: UIFont(name: "GentiumBookBasic", size: 32)!,
+                NSFontAttributeName: UIFont(name: "Mercury-TextG1Roman", size: 32)!,
                 NSParagraphStyleAttributeName: paragraphStyle
             ])
         self.descriptionTextLabel.textColor = UIColor.greyTextColor()

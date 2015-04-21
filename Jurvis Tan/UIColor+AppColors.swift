@@ -28,4 +28,8 @@ extension UIColor {
     class func subGreyTextColor() -> UIColor {
         return UIColor(red:0.43, green:0.43, blue:0.43, alpha:1)
     }
+    
+    class func headerGreyTextColor() -> UIColor {
+        return UIColor(red:0.31, green:0.31, blue:0.31, alpha:1)
+    }
 }

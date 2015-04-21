@@ -24,7 +24,7 @@ class FinalViewController: BaseViewController {
         thankYouLabel = UILabel()
         thankYouLabel.text = "Thank You".uppercaseString
         thankYouLabel.textColor = UIColor.lightOrangeBackgroundColor()
-        thankYouLabel.font = UIFont(name: "OpenSans-Extrabold", size: 60)
+        thankYouLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 60)
         thankYouLabel.sizeToFit()
         thankYouLabel.frame.origin = CGPointMake(50, 50)
         
@@ -41,7 +41,7 @@ class FinalViewController: BaseViewController {
         bodyTextParaStyle.lineSpacing = 9;
         bodyTextView.attributedText = NSAttributedString(string:"Yes, you. For being part of Apple and making all of this and WWDC possible.\n\nApple is my source of inspiration for this road I tread, ever since I got my first Macbook when I was 13. It was the first computer I wrote my first computer program on and I’ve never stopped writing code ever since.\n\nApple has also contributed to my appreciation on the balance of design, aesthetic and technology. Not just limited to programming, Apple has left its influence on various aspects of my life.\n\nIt would be a great honour to be given the opportunity to go to WWDC to meet new iOS developers my age and beyond, to further inspire my love for travelling deeper into the realms of iOS Development and finally, to push ahead and build meaningful experiences and apps for the community.\n\nI hope to see you there.",
             attributes: [
-                NSFontAttributeName: UIFont(name: "GentiumBookBasic", size: 19)!,
+                NSFontAttributeName: UIFont(name: "Mercury-TextG1Roman", size: 19)!,
                 NSParagraphStyleAttributeName: bodyTextParaStyle,
                 NSForegroundColorAttributeName: UIColor.lightOrangeBackgroundColor()
             ])

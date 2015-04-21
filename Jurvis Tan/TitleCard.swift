@@ -25,17 +25,17 @@ class TitleCard: UIView, UIDynamicItem {
         self.imageView.frame = CGRectMake(0, 0, imageWidthAndHeight, imageWidthAndHeight)
         self.imageView.image = UIImage(named: "profile")
         
-        let openSansRegularDict: NSDictionary = [
-            NSFontAttributeName : UIFont(name: "OpenSans", size: 32.0)!,
+        let whitneyRegularDict: NSDictionary = [
+            NSFontAttributeName : UIFont(name: "WhitneyHTF-Book", size: 32.0)!,
         ]
         
-        let openSansExtraboldDict: NSDictionary = [
-            NSFontAttributeName : UIFont(name: "OpenSans-Extrabold", size: 32.0)!,
+        let whitneyExtraboldDict: NSDictionary = [
+            NSFontAttributeName : UIFont(name: "WhitneyHTF-SemiBold", size: 32.0)!,
         ]
         
-        let aAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Hi, my name is ", attributes: openSansRegularDict as [NSObject : AnyObject])
-        let bAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Jurvis", attributes: openSansExtraboldDict as [NSObject : AnyObject])
-        let cAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: ", I’m a 17 year old iOS/Web Developer from Singapore.\n\nHere are some of my recent projects…", attributes: openSansRegularDict as [NSObject : AnyObject])
+        let aAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Hi, my name is ", attributes: whitneyRegularDict as [NSObject : AnyObject])
+        let bAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Jurvis.\n", attributes: whitneyExtraboldDict as [NSObject : AnyObject])
+        let cAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "I’m a 17 year old iOS/Web Developer from Singapore.\n\nHere are some of my recent projects.", attributes: whitneyRegularDict as [NSObject : AnyObject])
         
         let finalString:NSMutableAttributedString = NSMutableAttributedString()
         finalString.appendAttributedString(aAttrbString)

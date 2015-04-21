@@ -20,7 +20,7 @@ class WorkExperienceViewController: BaseViewController {
         let screenRect = UIScreen.mainScreen().bounds
         
         self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "OpenSans-Extrabold", size: 32)
+        self.titleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
         self.titleLabel.textColor = UIColor.greyTextColor()
         self.titleLabel.text = self.title?.uppercaseString
         self.titleLabel.sizeToFit()
@@ -32,7 +32,7 @@ class WorkExperienceViewController: BaseViewController {
         
         let shortTitleWidth: CGFloat = screenRect.size.width * 0.635
         self.shortTitleLabel = UILabel(frame: CGRectMake((screenRect.size.width - shortTitleWidth) / 2 , CGRectGetMaxY(self.titleLabel.frame) + 60, shortTitleWidth, 0))
-        self.shortTitleLabel.font = UIFont(name: "GentiumBookBasic", size: 32)!
+        self.shortTitleLabel.font = UIFont(name: "Mercury-TextG1Roman", size: 32)!
         self.shortTitleLabel.textColor = UIColor.greyTextColor()
         self.shortTitleLabel.numberOfLines = 0
         self.shortTitleLabel.textAlignment = NSTextAlignment.Center
@@ -72,7 +72,7 @@ class WorkExperienceViewController: BaseViewController {
         newView.companyNameAndDurationLabel.text = company.companyName + " (" + company.dateRange + ")"
         newView.jobDescriptionLabel.attributedText = NSAttributedString(string: company.jobDescription,
             attributes: [
-                NSFontAttributeName: UIFont(name: "OpenSans", size: 21)!,
+                NSFontAttributeName: UIFont(name: "WhitneyHTF-Book", size: 21)!,
             ])
         
         

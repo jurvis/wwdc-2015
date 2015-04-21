@@ -24,12 +24,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>OpenSans-Light.ttf</string>
-		<string>OpenSans-Regular.ttf</string>
-		<string>OpenSans-Semibold.ttf</string>
-		<string>OpenSans-ExtraBold.ttf</string>
-		<string>OpenSans-Bold.ttf</string>
-		<string>GenBkBasR.ttf</string>
+		<string>Mercury-TextG1Roman.otf</string>
+		<string>WhitneyHTF-Bold.otf</string>
+		<string>WhitneyHTF-Book.otf</string>
+		<string>WhitneyHTF-SemiBold.otf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

@@ -35,7 +35,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         self.view.backgroundColor = UIColor.greyTextColor()
         
         self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "OpenSans-Extrabold", size: 32)
+        self.titleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
         self.titleLabel.textColor = UIColor.lightOrangeBackgroundColor()
         self.titleLabel.text = self.title?.uppercaseString
         self.titleLabel.sizeToFit()
@@ -47,7 +47,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         
         let titleHeaderWidth: CGFloat = screenRect.size.width * 0.705
         self.titleHeader = UILabel(frame: CGRectMake((screenRect.size.width - titleHeaderWidth) / 2 , CGRectGetMaxY(self.titleLabel.frame) + 60, titleHeaderWidth, 0))
-        self.titleHeader.font = UIFont(name: "OpenSans-Semibold", size: 32)!
+        self.titleHeader.font = UIFont(name: "WhitneyHTF-SemiBold", size: 32)!
         self.titleHeader.textColor = UIColor.lightOrangeBackgroundColor()
         self.titleHeader.numberOfLines = 0;
         self.titleHeader.textAlignment = NSTextAlignment.Center
@@ -67,7 +67,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         
         self.titleSubtitle = UILabel()
         self.titleSubtitle.text = "here are some of my photos"
-        self.titleSubtitle.font = UIFont(name: "OpenSans-Light", size: 32)!
+        self.titleSubtitle.font = UIFont(name: "WhitneyHTF-Book", size: 32)!
         self.titleSubtitle.textColor = UIColor.lightOrangeBackgroundColor()
         self.titleSubtitle.sizeToFit()
         self.titleSubtitle.frame = CGRectMake((screenRect.size.width - self.titleSubtitle.frame.size.width) / 2, (( CGRectGetMaxY(self.titleHeader.frame) + CGRectGetMinY(self.photoGallery!.frame) ) / 2) - self.titleSubtitle.frame.size.height, self.titleSubtitle.frame.size.width, self.titleSubtitle.frame.size.height)
