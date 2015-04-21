@@ -19,8 +19,6 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         
         let parentSize: CGSize = self.view.bounds.size
         let cardViewSize: CGSize = CGSizeMake(parentSize.width - 188.5, parentSize.height - 99.0)
@@ -71,15 +69,25 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
                 NSParagraphStyleAttributeName: multitudeDescParaStyle
             ])
         
-
+        
+        closeButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        closeButton.setImage(UIImage(named: "close_btn"), forState: UIControlState.Normal)
+        closeButton.setImage(UIImage(named: "close_btn_selected"), forState: UIControlState.Highlighted)
+        closeButton.addTarget(self, action: "closeDetail", forControlEvents: UIControlEvents.TouchUpInside)
+        closeButton.frame = CGRectMake(CGRectGetMaxX(containerView.frame) - 25 - 34, CGRectGetMinY(containerView.frame) + 25, 34, 34)
+        
         detailScrollView.addSubview(relayPlayCardView)
         detailScrollView.addSubview(multitudeCardView)
         self.containerView.addSubview(self.imageScrollView)
         self.containerView.addSubview(self.detailScrollView)
         self.containerView.addSubview(self.pageControl)
+        self.containerView.addSubview(self.closeButton)
         self.view .addSubview(containerView)
     }
-
+    
+    func closeDetail() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         var pageNumber = ceil(scrollView.contentOffset.x / (scrollView.frame.size.width))

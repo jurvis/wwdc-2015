@@ -25,7 +25,8 @@ class PhotoPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         selectedImageView.frame = toViewController.prevCellRect
         
         containerView.addSubview(selectedImageView)
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             selectedImageView.frame = toViewController.imageView.frame
         }) { (finished) -> Void in
             fromViewController.view .removeFromSuperview()

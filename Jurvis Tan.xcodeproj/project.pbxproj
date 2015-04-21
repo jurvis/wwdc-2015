@@ -16,6 +16,9 @@
 		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
 		2830923A1AE266B2005AB9A9 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */; };
 		2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */; };
+		2849F5331AE5C1E3007A3487 /* PhotoDismissInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */; };
+		2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2849F5381AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BC1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */; };
 		288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B01ADE04FC00B9DB7B /* Images.xcassets */; };
 		288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */; };
@@ -33,15 +36,13 @@
 		288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50E81ADE4A8400B9DB7B /* TitleCard.swift */; };
 		288A50EB1ADE60BC00B9DB7B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EA1ADE60BC00B9DB7B /* AppView.swift */; };
 		288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */; };
+		288D3C771AE52B4F00EF444F /* UIImageView+AFNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D3C761AE52B4F00EF444F /* UIImageView+AFNetworking.swift */; };
 		28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */; };
 		28A09ED01AE10E05000C7E3B /* CardDetailPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */; };
 		28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */; };
 		28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */; };
 		28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */; };
 		28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED81AE11749000C7E3B /* HackathonCard.swift */; };
-		28B6673F1AE293C600F19A22 /* UIImageView+AFNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6673E1AE293C600F19A22 /* UIImageView+AFNetworking.swift */; };
-		28B667421AE29B7400F19A22 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		28B667431AE29B7400F19A22 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BC1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28B667451AE2A03700F19A22 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667441AE2A03600F19A22 /* Reachability.swift */; };
 		28B667471AE2A9AF00F19A22 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */; };
 		28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675A1AE3734800F19A22 /* FinalViewController.swift */; };
@@ -78,7 +79,7 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
-		280169C51AE280710017DCAB /* PBXContainerItemProxy */ = {
+		2849F5391AE5C86A007A3487 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 280169B21AE27F7B0017DCAB /* Alamofire.xcodeproj */;
 			proxyType = 1;
@@ -94,8 +95,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				28B667421AE29B7400F19A22 /* Alamofire.framework in Copy Frameworks */,
-				28B667431AE29B7400F19A22 /* Alamofire.framework in Copy Frameworks */,
+				2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */,
+				2849F5381AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +114,7 @@
 		280FD2201ADFB6450036B8B0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		282200D81AE12CFC00349AB1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDismissInteractor.swift; sourceTree = "<group>"; };
 		288A50A41ADE04FC00B9DB7B /* Jurvis Tan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jurvis Tan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50A81ADE04FC00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,13 +136,13 @@
 		288A50E81ADE4A8400B9DB7B /* TitleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCard.swift; sourceTree = "<group>"; };
 		288A50EA1ADE60BC00B9DB7B /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		288A50EE1ADE6EF500B9DB7B /* PersonalApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalApp.swift; sourceTree = "<group>"; };
+		288D3C761AE52B4F00EF444F /* UIImageView+AFNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AFNetworking.swift"; sourceTree = "<group>"; };
 		28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailPresentationController.swift; sourceTree = "<group>"; };
 		28A09ECF1AE10E05000C7E3B /* CardDetailPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailPresentationManager.swift; sourceTree = "<group>"; };
 		28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentAnimator.swift; sourceTree = "<group>"; };
 		28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDismissAnimator.swift; sourceTree = "<group>"; };
 		28A09ED81AE11749000C7E3B /* HackathonCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonCard.swift; sourceTree = "<group>"; };
-		28B6673E1AE293C600F19A22 /* UIImageView+AFNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+AFNetworking.swift"; path = "../../../../../../Downloads/Swift-UIImageView-AFNetworking-master/UIImageView+AFNetworking.swift"; sourceTree = "<group>"; };
 		28B667441AE2A03600F19A22 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		28B6675A1AE3734800F19A22 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
@@ -210,8 +212,8 @@
 			children = (
 				288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */,
 				288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */,
-				28B6673E1AE293C600F19A22 /* UIImageView+AFNetworking.swift */,
 				28B667441AE2A03600F19A22 /* Reachability.swift */,
+				288D3C761AE52B4F00EF444F /* UIImageView+AFNetworking.swift */,
 				28A09ED51AE10F92000C7E3B /* Presentation */,
 				280FD2221ADFB64B0036B8B0 /* Model */,
 				288A50F01ADE6EFD00B9DB7B /* View */,
@@ -294,6 +296,7 @@
 				2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */,
 				2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */,
 				2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */,
+				2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -313,7 +316,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				280169C61AE280710017DCAB /* PBXTargetDependency */,
+				2849F53A1AE5C86A007A3487 /* PBXTargetDependency */,
 			);
 			name = "Jurvis Tan";
 			productName = "Jurvis Tan";
@@ -458,6 +461,7 @@
 				288A50E61ADE1AA700B9DB7B /* BaseViewController.swift in Sources */,
 				288A50E41ADE195B00B9DB7B /* ContainerViewController.swift in Sources */,
 				288A50E91ADE4A8400B9DB7B /* TitleCard.swift in Sources */,
+				288D3C771AE52B4F00EF444F /* UIImageView+AFNetworking.swift in Sources */,
 				28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */,
 				28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */,
 				280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */,
@@ -465,8 +469,8 @@
 				2805F4E31AE3EAE1005E5A31 /* PhotoPresentAnimator.swift in Sources */,
 				28B667451AE2A03700F19A22 /* Reachability.swift in Sources */,
 				28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */,
+				2849F5331AE5C1E3007A3487 /* PhotoDismissInteractor.swift in Sources */,
 				280FD2211ADFB6450036B8B0 /* Company.swift in Sources */,
-				28B6673F1AE293C600F19A22 /* UIImageView+AFNetworking.swift in Sources */,
 				28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */,
 				28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */,
 				288A50CC1ADE09C900B9DB7B /* UIColor+AppColors.swift in Sources */,
@@ -485,10 +489,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		280169C61AE280710017DCAB /* PBXTargetDependency */ = {
+		2849F53A1AE5C86A007A3487 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 280169C51AE280710017DCAB /* PBXContainerItemProxy */;
+			targetProxy = 2849F5391AE5C86A007A3487 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -591,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jurvis Tan/Info.plist";
@@ -605,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jurvis Tan/Info.plist";

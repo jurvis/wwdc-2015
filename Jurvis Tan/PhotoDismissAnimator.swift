@@ -23,15 +23,18 @@ class PhotoDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         var imageView = fromViewController.view.resizableSnapshotViewFromRect(fromViewController.imageView.frame, afterScreenUpdates: false, withCapInsets: UIEdgeInsetsZero)
         imageView.frame = fromViewController.imageView.frame
         
+        var brownView = UIView(frame: CGRectOffset(fromViewController.prevCellRect, 0, -1))
+        brownView.backgroundColor = UIColor.greyTextColor()
+        
+        containerView.addSubview(brownView)
         containerView.addSubview(imageView)
         fromViewController.view.removeFromSuperview()
-        
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             imageView.frame = fromViewController.prevCellRect
-        }) { (finished) -> Void in
-            containerView.addSubview(toViewController.view)
-            imageView.removeFromSuperview()
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            }) { (finished) -> Void in
+                containerView.addSubview(toViewController.view)
+                imageView.removeFromSuperview()
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         }
     }
 }

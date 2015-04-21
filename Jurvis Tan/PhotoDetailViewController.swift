@@ -8,27 +8,25 @@
 
 import UIKit
 
-class PhotoDetailViewController: UIViewController {
+class PhotoDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var prevCellRect: CGRect!
     var viewControllerIndex: Int!
     var imageURL: NSURL!
+    var placeHolderImage: UIImage!
     var imageView:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let parentSize: CGSize = self.view.bounds.size
-        let cardViewSize: CGSize = CGSizeMake(parentSize.width - 188.5, parentSize.height - 99.0)
-        
         
         self.imageView = UIImageView(frame: CGRectMake(0, 0, 921.6, 614.4))
         self.imageView.center = self.view.center
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        println(imageURL.URLString)
-        self.imageView.setImageWithUrl(imageURL, placeHolderImage: nil)
+        self.imageView.setImageWithUrl(imageURL, placeHolderImage: placeHolderImage)
         
         var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissView")
-        tapGestureRecognizer.numberOfTapsRequired = 2
+        tapGestureRecognizer.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapGestureRecognizer)
         
         
@@ -38,6 +36,7 @@ class PhotoDetailViewController: UIViewController {
     func dismissView() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     
 

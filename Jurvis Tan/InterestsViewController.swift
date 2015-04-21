@@ -121,6 +121,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         let photo: NSDictionary = self.photoArray[indexPath.row] as! NSDictionary
         
         var detailViewController = PhotoDetailViewController()
+        self.detailTransitioningDelegate.photoDetailViewController = detailViewController
         detailViewController.transitioningDelegate = detailTransitioningDelegate
         detailViewController.modalPresentationStyle = .Custom
         
@@ -128,10 +129,13 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         detailViewController.imageURL = url
 
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotoViewCell
+
         var selectedCellRect = self.view.convertRect(selectedCell.frame, fromView: self.photoGallery!)
         detailViewController.prevCellRect = selectedCellRect
+        detailViewController.placeHolderImage = selectedCell.imageView.image
         detailViewController.viewControllerIndex = self.indexNumber
         
+
         self.presentViewController(detailViewController, animated: true, completion: nil)
     }
     
