@@ -8,16 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */; };
-		2805F4DF1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */; };
-		2805F4E31AE3EAE1005E5A31 /* PhotoPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */; };
-		2805F4E51AE3EAEA005E5A31 /* PhotoDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */; };
 		280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */; };
 		280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD21E1ADFB6280036B8B0 /* CompanyView.swift */; };
 		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
+		2813437E1AEA2384007BEE71 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813437D1AEA2384007BEE71 /* VideoViewController.swift */; };
+		281343811AEA38FB007BEE71 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 281343801AEA38FB007BEE71 /* YTPlayerView-iframe-player.html */; };
 		2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */; };
-		2849F5331AE5C1E3007A3487 /* PhotoDismissInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */; };
 		2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2849F5381AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BC1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */; };
 		288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B01ADE04FC00B9DB7B /* Images.xcassets */; };
 		288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */; };
@@ -36,8 +33,8 @@
 		28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */; };
 		28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */; };
 		28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A09ED81AE11749000C7E3B /* HackathonCard.swift */; };
+		28A5DF531AE9F5E400169A96 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DF521AE9F5E400169A96 /* YTPlayerView.m */; };
 		28B667451AE2A03700F19A22 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667441AE2A03600F19A22 /* Reachability.swift */; };
-		28B667471AE2A9AF00F19A22 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */; };
 		28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675A1AE3734800F19A22 /* FinalViewController.swift */; };
 		28B6675D1AE386AF00F19A22 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6675C1AE386AF00F19A22 /* WebViewController.swift */; };
 		28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D854751AE21A9D007D7174 /* InterestsViewController.swift */; };
@@ -94,7 +91,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */,
-				2849F5381AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,14 +100,13 @@
 /* Begin PBXFileReference section */
 		280169B21AE27F7B0017DCAB /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonProjectsViewController.swift; sourceTree = "<group>"; };
-		2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresentationManager.swift; sourceTree = "<group>"; };
-		2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPresentAnimator.swift; sourceTree = "<group>"; };
-		2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDismissAnimator.swift; sourceTree = "<group>"; };
 		280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
 		280FD21E1ADFB6280036B8B0 /* CompanyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		280FD2201ADFB6450036B8B0 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		281343791AEA2311007BEE71 /* JurvisTan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JurvisTan-Bridging-Header.h"; sourceTree = "<group>"; };
+		2813437D1AEA2384007BEE71 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		281343801AEA38FB007BEE71 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
-		2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDismissInteractor.swift; sourceTree = "<group>"; };
 		288A50A41ADE04FC00B9DB7B /* Jurvis Tan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jurvis Tan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50A81ADE04FC00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,8 +129,9 @@
 		28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDismissAnimator.swift; sourceTree = "<group>"; };
 		28A09ED81AE11749000C7E3B /* HackathonCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackathonCard.swift; sourceTree = "<group>"; };
+		28A5DF511AE9F5E400169A96 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		28A5DF521AE9F5E400169A96 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		28B667441AE2A03600F19A22 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		28B6675A1AE3734800F19A22 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		28B6675C1AE386AF00F19A22 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		28D854751AE21A9D007D7174 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +180,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		2813437F1AEA38FB007BEE71 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				281343801AEA38FB007BEE71 /* YTPlayerView-iframe-player.html */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		288A509B1ADE04FC00B9DB7B = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +228,8 @@
 		288A50A71ADE04FC00B9DB7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				281343791AEA2311007BEE71 /* JurvisTan-Bridging-Header.h */,
+				28A5DF501AE9F5E400169A96 /* YTPlayerView */,
 				28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */,
 				28E499B21AE6617B00AA0C65 /* WhitneyHTF-Bold.otf */,
 				28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */,
@@ -257,11 +263,11 @@
 				288A50E51ADE1AA700B9DB7B /* BaseViewController.swift */,
 				288A50C91ADE057A00B9DB7B /* HomeViewController.swift */,
 				288A50D11ADE0DA700B9DB7B /* PersonalWorkViewController.swift */,
+				2813437D1AEA2384007BEE71 /* VideoViewController.swift */,
 				280338361ADF6CEE0094D741 /* HackathonProjectsViewController.swift */,
 				28A09ED31AE10ED3000C7E3B /* CardDetailViewController.swift */,
 				280FD21C1ADFA7470036B8B0 /* WorkExperienceViewController.swift */,
 				28D854751AE21A9D007D7174 /* InterestsViewController.swift */,
-				28B667461AE2A9AF00F19A22 /* PhotoDetailViewController.swift */,
 				28B6675A1AE3734800F19A22 /* FinalViewController.swift */,
 				28B6675C1AE386AF00F19A22 /* WebViewController.swift */,
 			);
@@ -287,12 +293,18 @@
 				28A09ECD1AE10B42000C7E3B /* CardDetailPresentationController.swift */,
 				28A09ED11AE10E8F000C7E3B /* CardPresentAnimator.swift */,
 				28A09ED61AE10FA4000C7E3B /* CardDismissAnimator.swift */,
-				2805F4DE1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift */,
-				2805F4E21AE3EAE1005E5A31 /* PhotoPresentAnimator.swift */,
-				2805F4E41AE3EAEA005E5A31 /* PhotoDismissAnimator.swift */,
-				2849F5321AE5C1E3007A3487 /* PhotoDismissInteractor.swift */,
 			);
 			name = Presentation;
+			sourceTree = "<group>";
+		};
+		28A5DF501AE9F5E400169A96 /* YTPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				2813437F1AEA38FB007BEE71 /* Assets */,
+				28A5DF511AE9F5E400169A96 /* YTPlayerView.h */,
+				28A5DF521AE9F5E400169A96 /* YTPlayerView.m */,
+			);
+			path = YTPlayerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +431,7 @@
 				28E499BA1AE6618D00AA0C65 /* WhitneyHTF-Book.otf in Resources */,
 				28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */,
 				288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */,
+				281343811AEA38FB007BEE71 /* YTPlayerView-iframe-player.html in Resources */,
 				288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,14 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2805F4E51AE3EAEA005E5A31 /* PhotoDismissAnimator.swift in Sources */,
 				28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */,
 				288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */,
+				2813437E1AEA2384007BEE71 /* VideoViewController.swift in Sources */,
 				288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */,
 				280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */,
 				288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */,
 				28D854761AE21A9D007D7174 /* InterestsViewController.swift in Sources */,
-				28B667471AE2A9AF00F19A22 /* PhotoDetailViewController.swift in Sources */,
 				288A50D21ADE0DA700B9DB7B /* PersonalWorkViewController.swift in Sources */,
 				280FD21D1ADFA7470036B8B0 /* WorkExperienceViewController.swift in Sources */,
 				28E499BF1AE67DE700AA0C65 /* AppTitle.swift in Sources */,
@@ -457,11 +469,9 @@
 				28A09ED21AE10E8F000C7E3B /* CardPresentAnimator.swift in Sources */,
 				28A09ED71AE10FA4000C7E3B /* CardDismissAnimator.swift in Sources */,
 				280338371ADF6CEE0094D741 /* HackathonProjectsViewController.swift in Sources */,
-				2805F4DF1AE3EA31005E5A31 /* PhotoDetailPresentationManager.swift in Sources */,
-				2805F4E31AE3EAE1005E5A31 /* PhotoPresentAnimator.swift in Sources */,
+				28A5DF531AE9F5E400169A96 /* YTPlayerView.m in Sources */,
 				28B667451AE2A03700F19A22 /* Reachability.swift in Sources */,
 				28A09ED91AE11749000C7E3B /* HackathonCard.swift in Sources */,
-				2849F5331AE5C1E3007A3487 /* PhotoDismissInteractor.swift in Sources */,
 				280FD2211ADFB6450036B8B0 /* Company.swift in Sources */,
 				28A09ED41AE10ED3000C7E3B /* CardDetailViewController.swift in Sources */,
 				28A09ECE1AE10B42000C7E3B /* CardDetailPresentationController.swift in Sources */,
@@ -540,6 +550,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jurvis Tan/JurvisTan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -578,6 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jurvis Tan/JurvisTan-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};

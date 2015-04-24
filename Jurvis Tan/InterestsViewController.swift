@@ -10,8 +10,8 @@ import UIKit
 import Alamofire
 
 class InterestsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    let detailTransitioningDelegate: PhotoDetailPresentationManager = PhotoDetailPresentationManager()
-
+    var smallLayout: UICollectionViewFlowLayout!
+    var largeLayout: UICollectionViewFlowLayout!
     
     var photoArray: Array<AnyObject> = []
     var titleIcon: UIImageView!
@@ -54,31 +54,40 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         self.titleHeader.text = "On top of writing apps during my free time, I enjoy travelling and telling stories through my photos to keep in touch with my creative side"
         self.titleHeader.sizeToFit()
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 14)
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        layout.itemSize = CGSize(width: 300, height: 200)
-        self.photoGallery = UICollectionView(frame: CGRectMake(self.view.frame.size.width * 0.10 / 2, self.view.frame.size.height * 0.611, self.view.frame.size.width * 0.90, 200), collectionViewLayout: layout)
+        
+        smallLayout = UICollectionViewFlowLayout()
+        smallLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        smallLayout.itemSize = CGSize(width: 450, height: 300)
+        smallLayout.sectionInset = UIEdgeInsetsMake(300, 0, 0, 0)
+    
+        self.photoGallery = UICollectionView(frame: CGRectMake(0, 0, 921.6, 614.4), collectionViewLayout: smallLayout)
+        self.photoGallery!.center =  self.view.center
         self.photoGallery!.backgroundColor = UIColor.clearColor()
         self.photoGallery!.dataSource = self
         self.photoGallery!.delegate = self
         self.photoGallery!.showsHorizontalScrollIndicator = false
         self.photoGallery!.registerClass(PhotoViewCell.self, forCellWithReuseIdentifier: "PhotoViewCell")
+
+        
+        largeLayout = UICollectionViewFlowLayout()
+        largeLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        largeLayout.itemSize = self.photoGallery!.frame.size
+
         
         self.titleSubtitle = UILabel()
         self.titleSubtitle.text = "here are some of my photos"
         self.titleSubtitle.font = UIFont(name: "WhitneyHTF-Book", size: 32)!
         self.titleSubtitle.textColor = UIColor.lightOrangeBackgroundColor()
         self.titleSubtitle.sizeToFit()
-        self.titleSubtitle.frame = CGRectMake((screenRect.size.width - self.titleSubtitle.frame.size.width) / 2, (( CGRectGetMaxY(self.titleHeader.frame) + CGRectGetMinY(self.photoGallery!.frame) ) / 2) - self.titleSubtitle.frame.size.height, self.titleSubtitle.frame.size.width, self.titleSubtitle.frame.size.height)
+        self.titleSubtitle.frame = CGRectMake((screenRect.size.width - self.titleSubtitle.frame.size.width) / 2, CGRectGetMaxY(self.titleHeader.frame) + 40, self.titleSubtitle.frame.size.width, self.titleSubtitle.frame.size.height)
         
 
     
         self.view.addSubview(self.titleSubtitle)
         self.view.addSubview(self.titleHeader)
-        self.view.addSubview(self.photoGallery!)
         self.view.addSubview(self.titleLabel)
         self.view.addSubview(self.titleIcon)
+        self.view.addSubview(self.photoGallery!)
     }
     
     func getImages() {
@@ -118,25 +127,17 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let photo: NSDictionary = self.photoArray[indexPath.row] as! NSDictionary
         
-        var detailViewController = PhotoDetailViewController()
-        self.detailTransitioningDelegate.photoDetailViewController = detailViewController
-        detailViewController.transitioningDelegate = detailTransitioningDelegate
-        detailViewController.modalPresentationStyle = .Custom
+        var selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
+        var toLayout = self.smallLayout == collectionView.collectionViewLayout ? self.largeLayout : self.smallLayout
         
-        let url = self.getPhotoUrl(photo, forSize: "b")
-        detailViewController.imageURL = url
-
-        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotoViewCell
-
-        var selectedCellRect = self.view.convertRect(selectedCell.frame, fromView: self.photoGallery!)
-        detailViewController.prevCellRect = selectedCellRect
-        detailViewController.placeHolderImage = selectedCell.imageView.image
-        detailViewController.viewControllerIndex = self.indexNumber
-        
-
-        self.presentViewController(detailViewController, animated: true, completion: nil)
+        self.photoGallery?.setCollectionViewLayout(toLayout, animated: true, completion: { (finished) -> Void in
+            if toLayout == self.largeLayout {
+                collectionView.pagingEnabled = true
+            } else {
+                collectionView.pagingEnabled = false
+            }
+        })
     }
     
     func getPhotoUrl(photo: NSDictionary, forSize size: NSString) -> NSURL {

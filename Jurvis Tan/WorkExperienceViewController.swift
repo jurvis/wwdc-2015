@@ -36,7 +36,7 @@ class WorkExperienceViewController: BaseViewController {
         self.shortTitleLabel.textColor = UIColor.greyTextColor()
         self.shortTitleLabel.numberOfLines = 0
         self.shortTitleLabel.textAlignment = NSTextAlignment.Center
-        self.shortTitleLabel.text = "Since learning to code, I’ve had the pleasure of working at these companies."
+        self.shortTitleLabel.text = "Since learning to code, I’ve had the pleasure of working at these companies; to build real-world applications and expand my skill set."
         self.shortTitleLabel.sizeToFit()
         
         let carousellLogo: UIImageView = UIImageView(image: UIImage(named: "carousell_logo"))

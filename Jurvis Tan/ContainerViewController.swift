@@ -60,6 +60,7 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
                 let exhibitGuideApp: PersonalApp = personalProjects["ExhibitGuide"]!
                 tempVC.app = exhibitGuideApp
                 tempVC.imageName = "exhibitguide_app_phone"
+                tempVC.appVideoUrl = "https://www.youtube.com/watch?v=CICMxwgm274"
                 vc = tempVC
             case 3:
                 let tempVC = HackathonProjectsViewController() as HackathonProjectsViewController
@@ -129,8 +130,8 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     }
     
     func loadModel() {
-        let nebuloApp: PersonalApp = PersonalApp(title: "Nebulo", withSubtitle: "Beautiful Haze Reports For Singapore", andDescription: "Nebulo aims to create an effortless experience for users to check the current Air Quality data during haze season. It takes away the hassle of browsing through menus just to view the relevant data.\n\nI built a backend in Go that scrapes http://aqicn.org/ for PM2.5 and PSI data and stores it to be accessed by the iPhone app easily.", andAppIcon: UIImage(named: "nebulo_icon")!)
-        let exhibitGuideApp: PersonalApp = PersonalApp(title: "ExhibitGuide", withSubtitle: "Exhibits based on context", andDescription: "Created with the purpose of enhancing the feature of existing audio tour systems, ExhibitGuide is an iOS app I’ve been working on at buUuk which utilizes iBeacons to track and feed exhibit data to the user’s phones.\n\nWith proximity information gathered from the iBeacons, this app allowed me to look into displaying relevant UI based on the user’s real-world context; an interaction paradigm that I intend to probe further in my future apps.", andAppIcon: UIImage(named: "exhibitguide_icon")!)
+        let nebuloApp: PersonalApp = PersonalApp(title: "Nebulo", withSubtitle: "Beautiful Haze Reports For Singapore", andDescription: "Nebulo is my first app that aims to create an effortless experience for users to check the current Air Quality data during haze season. It takes away the hassle of browsing through menus just to view the relevant data.\n\nI built a backend in Go that scrapes http://aqicn.org/ for PM2.5 and PSI data and stores it to be accessed by the iPhone app easily.", andAppIcon: UIImage(named: "nebulo_icon")!)
+        let exhibitGuideApp: PersonalApp = PersonalApp(title: "ExhibitGuide", withSubtitle: "Exhibits based on context", andDescription: "Created with the purpose of enhancing the feature of existing audio tour systems, ExhibitGuide is an iOS app I’ve been working on at buUuk which utilizes iBeacons to track and feed exhibit data to the user’s phones.\n\nWith proximity information gathered from the iBeacons, this app allowed me to look into displaying relevant UI based on the user’s real-world context; an interaction paradigm that I intend to probe further especially with the inception of the Apple Watch.", andAppIcon: UIImage(named: "exhibitguide_icon")!)
         self.personalProjects = [nebuloApp.title: nebuloApp,
             exhibitGuideApp.title: exhibitGuideApp]
         

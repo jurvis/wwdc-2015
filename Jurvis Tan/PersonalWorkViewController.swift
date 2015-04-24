@@ -9,8 +9,10 @@
 import UIKit
 
 class PersonalWorkViewController: BaseViewController {
+    let detailTransitioningDelegate: CardDetailPresentationManager = CardDetailPresentationManager()
     
     var imageName: String?
+    var appVideoUrl: String!
     var app: PersonalApp!
     var applicationDetail: UIView!
     var applicationTitle: AppTitle!
@@ -46,9 +48,24 @@ class PersonalWorkViewController: BaseViewController {
         appDescriptionTextView.frame = CGRectMake(appDescriptionTextView.frame.origin.x, appDescriptionTextView.frame.origin.y, applicationTitle.frame.size.width, descriptionCellRect.size.height + (18 * 1.125))
         
         applicationDetail = UIView(frame: CGRectUnion(applicationTitle.frame, appDescriptionTextView.frame))
+        
+        if (appVideoUrl != nil) {
+            var videoButton: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+            
+            videoButton.setBackgroundImage(UIImage(named: "watch-video-btn"), forState: UIControlState.Normal)
+            videoButton.setBackgroundImage(UIImage(named: "watch-video-btn-highlighted"), forState: UIControlState.Highlighted)
+            videoButton.addTarget(self, action: "watchVideo", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            videoButton.frame = CGRectMake((applicationDetail.bounds.width - 232) / 2, CGRectGetMaxY(appDescriptionTextView.frame), 232, 44)
+            
+            applicationDetail.frame = CGRectUnion(applicationDetail.frame, videoButton.frame)
+            applicationDetail.addSubview(videoButton)
+        }
+        
         applicationDetail.addSubview(applicationTitle)
         applicationDetail.addSubview(appDescriptionTextView)
         applicationDetail.frame.origin = CGPointMake(screenRect.size.width * 0.47, ( screenRect.size.height - applicationDetail.frame.size.height ) / 2)
+ 
         
         
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
@@ -98,6 +115,15 @@ class PersonalWorkViewController: BaseViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "scrollViewScrolled", object: nil)
     }
 
+    func watchVideo() {
+        var videoController = VideoViewController()
+        videoController.transitioningDelegate = detailTransitioningDelegate
+        videoController.modalPresentationStyle = .Custom
+        videoController.videoUrl = self.appVideoUrl
+        
+        self.presentViewController(videoController, animated: true, completion: nil)
+    }
+    
     func viewExiting(notification: NSNotification){
         var y = notification.object as! CGFloat
         var applicationImageViewFromFrame: CGRect =  self.applicationImageView.frame
