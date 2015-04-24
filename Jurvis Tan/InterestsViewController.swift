@@ -14,8 +14,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     var largeLayout: UICollectionViewFlowLayout!
     
     var photoArray: Array<AnyObject> = []
-    var titleIcon: UIImageView!
-    var titleLabel: UILabel!
+    var titleView: TitleView!
     var titleHeader: UILabel!
     var titleSubtitle: UILabel!
     var photoGallery: UICollectionView?
@@ -34,19 +33,14 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
 
         self.view.backgroundColor = UIColor.greyTextColor()
         
-        self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
-        self.titleLabel.textColor = UIColor.lightOrangeBackgroundColor()
-        self.titleLabel.text = self.title?.uppercaseString
-        self.titleLabel.sizeToFit()
-        self.titleLabel.frame = CGRectMake(screenRect.size.width - titleLabel.frame.size.width - (screenRect.size.width * 0.095), screenRect.size.height * 0.074, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height)
-        
-        self.titleIcon = UIImageView()
-        self.titleIcon.image = UIImage(named: "interests_glyph")
-        self.titleIcon.frame = CGRectMake(CGRectGetMinX(self.titleLabel.frame) - 14 - self.titleIcon.image!.size.width, CGRectGetMidY(self.titleLabel.frame) - (self.titleIcon.image!.size.height / 2), self.titleIcon.image!.size.width, self.titleIcon.image!.size.height)
+        var titleIconImage = UIImage(named: "interests_glyph")
+        titleView = TitleView(title: title!.uppercaseString, image: titleIconImage!, frame: CGRectMake(0, 0, 200, titleIconImage!.size.height))
+        titleView.resizeToFitSubviews()
+        titleView.titleLabel.textColor = UIColor.lightOrangeBackgroundColor()
+        titleView.frame.origin = CGPointMake(screenRect.size.width - titleView.frame.size.width - (screenRect.size.width * 0.056), screenRect.size.height * 0.074)
         
         let titleHeaderWidth: CGFloat = screenRect.size.width * 0.705
-        self.titleHeader = UILabel(frame: CGRectMake((screenRect.size.width - titleHeaderWidth) / 2 , CGRectGetMaxY(self.titleLabel.frame) + 60, titleHeaderWidth, 0))
+        self.titleHeader = UILabel(frame: CGRectMake((screenRect.size.width - titleHeaderWidth) / 2 , CGRectGetMaxY(self.titleView.frame) + 60, titleHeaderWidth, 0))
         self.titleHeader.font = UIFont(name: "WhitneyHTF-SemiBold", size: 32)!
         self.titleHeader.textColor = UIColor.lightOrangeBackgroundColor()
         self.titleHeader.numberOfLines = 0;
@@ -85,8 +79,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     
         self.view.addSubview(self.titleSubtitle)
         self.view.addSubview(self.titleHeader)
-        self.view.addSubview(self.titleLabel)
-        self.view.addSubview(self.titleIcon)
+        self.view.addSubview(titleView)
         self.view.addSubview(self.photoGallery!)
     }
     

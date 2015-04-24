@@ -11,27 +11,20 @@ import UIKit
 class WorkExperienceViewController: BaseViewController {
     var workExperience = [String : Company]()
     
-    var titleIcon: UIImageView!
-    var titleLabel: UILabel!
+    var titleView: TitleView!
     var shortTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let screenRect = UIScreen.mainScreen().bounds
-        
-        self.titleLabel = UILabel()
-        self.titleLabel.font = UIFont(name: "WhitneyHTF-Bold", size: 32)
-        self.titleLabel.textColor = UIColor.greyTextColor()
-        self.titleLabel.text = self.title?.uppercaseString
-        self.titleLabel.sizeToFit()
-        self.titleLabel.frame = CGRectMake(screenRect.size.width - titleLabel.frame.size.width - (screenRect.size.width * 0.095), screenRect.size.height * 0.074, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height)
-        
-        self.titleIcon = UIImageView()
-        self.titleIcon.image = UIImage(named: "briefcase_glyph")
-        self.titleIcon.frame = CGRectMake(CGRectGetMinX(self.titleLabel.frame) - 14 - self.titleIcon.image!.size.width, CGRectGetMidY(self.titleLabel.frame) - (self.titleIcon.image!.size.height / 2), self.titleIcon.image!.size.width, self.titleIcon.image!.size.height)
+
+        var titleIconImage = UIImage(named: "briefcase_glyph")
+        titleView = TitleView(title: title!.uppercaseString, image: titleIconImage!, frame: CGRectMake(0, 0, 200, titleIconImage!.size.height))
+        titleView.resizeToFitSubviews()
+        titleView.frame.origin = CGPointMake(screenRect.size.width - titleView.frame.size.width - (screenRect.size.width * 0.056), screenRect.size.height * 0.074)
         
         let shortTitleWidth: CGFloat = screenRect.size.width * 0.635
-        self.shortTitleLabel = UILabel(frame: CGRectMake((screenRect.size.width - shortTitleWidth) / 2 , CGRectGetMaxY(self.titleLabel.frame) + 60, shortTitleWidth, 0))
+        self.shortTitleLabel = UILabel(frame: CGRectMake((screenRect.size.width - shortTitleWidth) / 2 , CGRectGetMaxY(self.titleView.frame) + 60, shortTitleWidth, 0))
         self.shortTitleLabel.font = UIFont(name: "Mercury-TextG1Roman", size: 32)!
         self.shortTitleLabel.textColor = UIColor.greyTextColor()
         self.shortTitleLabel.numberOfLines = 0
@@ -58,8 +51,7 @@ class WorkExperienceViewController: BaseViewController {
         self.view.addSubview(buuukLogo)
         self.view.addSubview(buuukCompanyView)
         self.view.addSubview(self.shortTitleLabel)
-        self.view.addSubview(self.titleLabel)
-        self.view.addSubview(self.titleIcon)
+        self.view.addSubview(titleView)
     
     }
     

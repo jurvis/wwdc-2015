@@ -43,6 +43,7 @@
 		28E499BA1AE6618D00AA0C65 /* WhitneyHTF-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */; };
 		28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */; };
 		28E499BF1AE67DE700AA0C65 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E499BE1AE67DE700AA0C65 /* AppTitle.swift */; };
+		28E8FAF61AEA829500A28C78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8FAF51AEA829500A28C78 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-Book.otf"; sourceTree = "<group>"; };
 		28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-SemiBold.otf"; sourceTree = "<group>"; };
 		28E499BE1AE67DE700AA0C65 /* AppTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
+		28E8FAF51AEA829500A28C78 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 		288A50F01ADE6EFD00B9DB7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				28E8FAF51AEA829500A28C78 /* TitleView.swift */,
 				288A50E81ADE4A8400B9DB7B /* TitleCard.swift */,
 				28E499BE1AE67DE700AA0C65 /* AppTitle.swift */,
 				280FD21E1ADFB6280036B8B0 /* CompanyView.swift */,
@@ -453,6 +456,7 @@
 				28B6675B1AE3734800F19A22 /* FinalViewController.swift in Sources */,
 				288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */,
 				2813437E1AEA2384007BEE71 /* VideoViewController.swift in Sources */,
+				28E8FAF61AEA829500A28C78 /* TitleView.swift in Sources */,
 				288A50EF1ADE6EF500B9DB7B /* PersonalApp.swift in Sources */,
 				280FD21F1ADFB6280036B8B0 /* CompanyView.swift in Sources */,
 				288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */,
