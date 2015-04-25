@@ -35,6 +35,7 @@ class PersonalWorkViewController: BaseViewController {
         
         appDescriptionTextView = UITextView(frame: CGRectMake(0, CGRectGetMaxY(applicationTitle.frame) + 25, applicationTitle.frame.size.width, 0))
         appDescriptionTextView.backgroundColor = UIColor.clearColor()
+        appDescriptionTextView.textContainer.lineFragmentPadding = 0
         appDescriptionTextView.selectable = false
         
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
@@ -44,8 +45,8 @@ class PersonalWorkViewController: BaseViewController {
         appDescriptionTextView.attributedText = NSAttributedString(string: app.appDescription, attributes: attrb as [NSObject : AnyObject])
 
         let descriptionText: NSString = app.appDescription as NSString
-        let descriptionCellRect: CGRect = descriptionText.boundingRectWithSize(CGSizeMake(appDescriptionTextView.frame.size.width - 40, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), attributes: attrb as [NSObject : AnyObject], context: nil)
-        appDescriptionTextView.frame = CGRectMake(appDescriptionTextView.frame.origin.x, appDescriptionTextView.frame.origin.y, applicationTitle.frame.size.width, descriptionCellRect.size.height + (18 * 1.125))
+        let descriptionTextViewRect: CGRect = appDescriptionTextView.attributedText.boundingRectWithSize(CGSizeMake(appDescriptionTextView.frame.size.width, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), context: nil)
+        appDescriptionTextView.frame = CGRectMake(appDescriptionTextView.frame.origin.x, appDescriptionTextView.frame.origin.y, applicationTitle.frame.size.width, descriptionTextViewRect.size.height + (17.5 * 1.125))
         
         applicationDetail = UIView(frame: CGRectUnion(applicationTitle.frame, appDescriptionTextView.frame))
         
@@ -56,7 +57,7 @@ class PersonalWorkViewController: BaseViewController {
             videoButton.setBackgroundImage(UIImage(named: "watch-video-btn-highlighted"), forState: UIControlState.Highlighted)
             videoButton.addTarget(self, action: "watchVideo", forControlEvents: UIControlEvents.TouchUpInside)
             
-            videoButton.frame = CGRectMake((applicationDetail.bounds.width - 232) / 2, CGRectGetMaxY(appDescriptionTextView.frame), 232, 44)
+            videoButton.frame = CGRectMake((applicationDetail.bounds.width - 232) / 2, CGRectGetMaxY(appDescriptionTextView.frame)+17, 232, 44)
             
             applicationDetail.frame = CGRectUnion(applicationDetail.frame, videoButton.frame)
             applicationDetail.addSubview(videoButton)

@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.runFloatAnimationOnView(swipeLabel, withDisplacement: 10.0)
+        self.runFloatAnimationOnView(swipeLabel, withDisplacement: 5.0)
 
     }
     
