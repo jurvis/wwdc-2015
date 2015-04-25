@@ -19,13 +19,6 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     var titleSubtitle: UILabel!
     var photoGallery: UICollectionView?
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if photoArray.count == 0 {
-            self.getImages()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +45,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         smallLayout = UICollectionViewFlowLayout()
         smallLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         smallLayout.itemSize = CGSize(width: 450, height: 300)
+        smallLayout.minimumInteritemSpacing = 14
         smallLayout.sectionInset = UIEdgeInsetsMake(300, 0, 0, 0)
     
         self.photoGallery = UICollectionView(frame: CGRectMake(0, 0, 921.6, 614.4), collectionViewLayout: smallLayout)
@@ -66,7 +60,7 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         largeLayout = UICollectionViewFlowLayout()
         largeLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         largeLayout.itemSize = self.photoGallery!.frame.size
-
+        largeLayout.minimumInteritemSpacing = 14
         
         self.titleSubtitle = UILabel()
         self.titleSubtitle.text = "here are some of my photos"
@@ -81,6 +75,13 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         self.view.addSubview(self.titleHeader)
         self.view.addSubview(titleView)
         self.view.addSubview(self.photoGallery!)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if photoArray.count == 0 {
+            self.getImages()
+        }
     }
     
     func getImages() {

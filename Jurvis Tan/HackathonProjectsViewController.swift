@@ -44,7 +44,7 @@ class HackathonProjectsViewController: BaseViewController {
         self.descriptionTextLabel.frame = CGRectMake((screenRect.size.width - maxWidth) / 2, CGRectGetMaxY(self.titleView.frame) + (screenRect.size.height * 0.086), maxWidth, descriptionTextLabelRect.size.height)
         
         
-        let appIconYPos: CGFloat = CGRectGetMaxY(self.descriptionTextLabel.frame) + (screenRect.size.height * 0.086)
+        let appIconYPos: CGFloat = CGRectGetMaxY(self.descriptionTextLabel.frame) + 45
         self.relayPlayAppIcon = UIImageView()
         self.relayPlayAppIcon.image = UIImage(named: "relayplay_icon")
         self.relayPlayAppIcon.frame = CGRectMake(self.descriptionTextLabel.frame.origin.x + 20, appIconYPos, self.relayPlayAppIcon.image!.size.width, self.relayPlayAppIcon.image!.size.height)
