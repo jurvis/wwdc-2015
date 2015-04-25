@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CardDetailViewController: UIViewController, UIScrollViewDelegate {
+    var swipeSound: SystemSoundID = 0
     var hackathonProjects : [String : PersonalApp]!
     
     var pageControl: UIPageControl!
@@ -19,7 +21,8 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpAudioEffects()
+
         let parentSize: CGSize = self.view.bounds.size
         let cardViewSize: CGSize = CGSizeMake(parentSize.width - 188.5, parentSize.height - 99.0)
         containerView = UIView(frame: CGRectMake(0, 0, cardViewSize.width, cardViewSize.height))
@@ -85,6 +88,12 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
         self.view .addSubview(containerView)
     }
     
+    func setUpAudioEffects() {
+        let soundPath = NSBundle.mainBundle().pathForResource("Warp Speed", ofType: "wav")
+        var url = NSURL.fileURLWithPath(soundPath!)
+        AudioServicesCreateSystemSoundID(url as! CFURL, &self.swipeSound)
+    }
+    
     func closeDetail() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -92,6 +101,10 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         var pageNumber = ceil(scrollView.contentOffset.x / (scrollView.frame.size.width))
         self.pageControl.currentPage = Int(pageNumber)
+    }
+
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        AudioServicesPlaySystemSound(swipeSound)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

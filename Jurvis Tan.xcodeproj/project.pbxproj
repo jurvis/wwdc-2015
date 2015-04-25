@@ -17,7 +17,6 @@
 		2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */; };
 		288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B01ADE04FC00B9DB7B /* Images.xcassets */; };
-		288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */; };
 		288A50C01ADE04FD00B9DB7B /* Jurvis_TanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50BF1ADE04FD00B9DB7B /* Jurvis_TanTests.swift */; };
 		288A50CA1ADE057A00B9DB7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50C91ADE057A00B9DB7B /* HomeViewController.swift */; };
 		288A50CC1ADE09C900B9DB7B /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50CB1ADE09C900B9DB7B /* UIColor+AppColors.swift */; };
@@ -44,6 +43,12 @@
 		28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */; };
 		28E499BF1AE67DE700AA0C65 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E499BE1AE67DE700AA0C65 /* AppTitle.swift */; };
 		28E8FAF61AEA829500A28C78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8FAF51AEA829500A28C78 /* TitleView.swift */; };
+		28E8FB011AEBB1EA00A28C78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E8FB001AEBB1EA00A28C78 /* LaunchScreen.xib */; };
+		28E8FB061AEBBA3000A28C78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E8FB041AEBBA1C00A28C78 /* AVFoundation.framework */; };
+		28E8FB1E1AEBCC0700A28C78 /* Complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28E8FB1D1AEBCC0700A28C78 /* Complete.wav */; };
+		28E8FB201AEBCC1C00A28C78 /* Warp Speed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28E8FB1F1AEBCC1C00A28C78 /* Warp Speed.wav */; };
+		28E8FB221AEBCC4500A28C78 /* Close The Window.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28E8FB211AEBCC4500A28C78 /* Close The Window.wav */; };
+		28E8FB241AEBCC6400A28C78 /* Glass Up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28E8FB231AEBCC6400A28C78 /* Glass Up.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +117,6 @@
 		288A50A81ADE04FC00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		288A50B01ADE04FC00B9DB7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		288A50B31ADE04FC00B9DB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		288A50B91ADE04FD00B9DB7B /* Jurvis TanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jurvis TanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50BE1ADE04FD00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288A50BF1ADE04FD00B9DB7B /* Jurvis_TanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jurvis_TanTests.swift; sourceTree = "<group>"; };
@@ -142,6 +146,12 @@
 		28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WhitneyHTF-SemiBold.otf"; sourceTree = "<group>"; };
 		28E499BE1AE67DE700AA0C65 /* AppTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
 		28E8FAF51AEA829500A28C78 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		28E8FB001AEBB1EA00A28C78 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		28E8FB041AEBBA1C00A28C78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		28E8FB1D1AEBCC0700A28C78 /* Complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Complete.wav; sourceTree = "<group>"; };
+		28E8FB1F1AEBCC1C00A28C78 /* Warp Speed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Warp Speed.wav"; sourceTree = "<group>"; };
+		28E8FB211AEBCC4500A28C78 /* Close The Window.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Close The Window.wav"; sourceTree = "<group>"; };
+		28E8FB231AEBCC6400A28C78 /* Glass Up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Glass Up.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E8FB061AEBBA3000A28C78 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +232,7 @@
 				288A50F01ADE6EFD00B9DB7B /* View */,
 				288A50E71ADE4A6B00B9DB7B /* View Controllers */,
 				288A50B01ADE04FC00B9DB7B /* Images.xcassets */,
-				288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */,
+				28E8FB001AEBB1EA00A28C78 /* LaunchScreen.xib */,
 				288A50A71ADE04FC00B9DB7B /* Supporting Files */,
 			);
 			path = "Jurvis Tan";
@@ -230,6 +241,10 @@
 		288A50A71ADE04FC00B9DB7B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28E8FB1D1AEBCC0700A28C78 /* Complete.wav */,
+				28E8FB1F1AEBCC1C00A28C78 /* Warp Speed.wav */,
+				28E8FB211AEBCC4500A28C78 /* Close The Window.wav */,
+				28E8FB231AEBCC6400A28C78 /* Glass Up.wav */,
 				281343791AEA2311007BEE71 /* JurvisTan-Bridging-Header.h */,
 				28A5DF501AE9F5E400169A96 /* YTPlayerView */,
 				28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */,
@@ -237,6 +252,7 @@
 				28E499B31AE6617B00AA0C65 /* WhitneyHTF-Book.otf */,
 				28E499B41AE6617B00AA0C65 /* WhitneyHTF-SemiBold.otf */,
 				288A50A81ADE04FC00B9DB7B /* Info.plist */,
+				28E8FB041AEBBA1C00A28C78 /* AVFoundation.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -431,11 +447,15 @@
 			files = (
 				28E499B81AE6618D00AA0C65 /* Mercury-TextG1Roman.otf in Resources */,
 				28E499B91AE6618D00AA0C65 /* WhitneyHTF-Bold.otf in Resources */,
+				28E8FB221AEBCC4500A28C78 /* Close The Window.wav in Resources */,
 				28E499BA1AE6618D00AA0C65 /* WhitneyHTF-Book.otf in Resources */,
+				28E8FB011AEBB1EA00A28C78 /* LaunchScreen.xib in Resources */,
+				28E8FB201AEBCC1C00A28C78 /* Warp Speed.wav in Resources */,
+				28E8FB241AEBCC6400A28C78 /* Glass Up.wav in Resources */,
 				28E499BB1AE6618D00AA0C65 /* WhitneyHTF-SemiBold.otf in Resources */,
-				288A50B41ADE04FC00B9DB7B /* LaunchScreen.xib in Resources */,
 				281343811AEA38FB007BEE71 /* YTPlayerView-iframe-player.html in Resources */,
 				288A50B11ADE04FC00B9DB7B /* Images.xcassets in Resources */,
+				28E8FB1E1AEBCC0700A28C78 /* Complete.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,17 +521,6 @@
 			targetProxy = 2849F5391AE5C86A007A3487 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		288A50B21ADE04FC00B9DB7B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				288A50B31ADE04FC00B9DB7B /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		288A50C11ADE04FD00B9DB7B /* Debug */ = {

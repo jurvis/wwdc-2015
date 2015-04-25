@@ -33,9 +33,9 @@ class TitleCard: UIView, UIDynamicItem {
             NSFontAttributeName : UIFont(name: "WhitneyHTF-SemiBold", size: 32.0)!,
         ]
         
-        let aAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Hi, my name is ", attributes: whitneyRegularDict as [NSObject : AnyObject])
+        let aAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Hello, my name is ", attributes: whitneyRegularDict as [NSObject : AnyObject])
         let bAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "Jurvis.\n", attributes: whitneyExtraboldDict as [NSObject : AnyObject])
-        let cAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "I’m a 17 year old iOS/Web Developer from Singapore.\n\nHere are some of my recent projects.", attributes: whitneyRegularDict as [NSObject : AnyObject])
+        let cAttrbString: NSMutableAttributedString = NSMutableAttributedString(string: "I’m a 17 year old iOS Developer and student of Ngee Ann Poly from Singapore.\n\nHere are some of my recent projects.", attributes: whitneyRegularDict as [NSObject : AnyObject])
         
         let finalString:NSMutableAttributedString = NSMutableAttributedString()
         finalString.appendAttributedString(aAttrbString)
@@ -45,7 +45,7 @@ class TitleCard: UIView, UIDynamicItem {
         
         let descriptionRect: CGRect = finalString.boundingRectWithSize(CGSizeMake(self.bounds.size.width-40, CGFloat.max), options: (NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin), context: nil)
         
-        let textDescription: UILabel = UILabel(frame: CGRectMake(0, CGRectGetMaxY(imageView.frame) + 35, self.frame.size.width, descriptionRect.size.height))
+        let textDescription: UILabel = UILabel(frame: CGRectMake(0, CGRectGetMaxY(imageView.frame) + 15, self.frame.size.width, descriptionRect.size.height))
         textDescription.attributedText = finalString
         textDescription.textColor = UIColor.greyTextColor()
         textDescription.numberOfLines = 0

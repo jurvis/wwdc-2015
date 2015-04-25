@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CardDetailPresentationController: UIPresentationController {
+    var presentSound: SystemSoundID = 0
+    var dismissSound: SystemSoundID = 1
     var dimmingView: UIView!
 
     
     override init(presentedViewController: UIViewController!, presentingViewController: UIViewController!) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
         setupDimmingView()
+        setUpAudioEffects()
     }
     
     func setupDimmingView() {
@@ -29,6 +33,16 @@ class CardDetailPresentationController: UIPresentationController {
         dimmingView.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    func setUpAudioEffects() {
+        let soundPath = NSBundle.mainBundle().pathForResource("Complete", ofType: "wav")
+        var url = NSURL.fileURLWithPath(soundPath!)
+        AudioServicesCreateSystemSoundID(url as! CFURL, &self.presentSound)
+        
+        let soundPath2 = NSBundle.mainBundle().pathForResource("Close The Window", ofType: "wav")
+        var url2 = NSURL.fileURLWithPath(soundPath2!)
+        AudioServicesCreateSystemSoundID(url2 as! CFURL, &self.dismissSound)
+    }
+    
     func dimmingViewTapped(tapRecognizer: UITapGestureRecognizer) {
         presentingViewController.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -40,6 +54,8 @@ class CardDetailPresentationController: UIPresentationController {
         dimmingView.frame = containerView.bounds
         dimmingView.alpha = 0.0
         
+        AudioServicesPlaySystemSound(self.presentSound)
+        
         containerView.insertSubview(dimmingView, atIndex: 0)
         presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ (coordinatorContext) -> Void in
             self.dimmingView.alpha = 1.0
@@ -47,6 +63,7 @@ class CardDetailPresentationController: UIPresentationController {
     }
     
     override func dismissalTransitionWillBegin() {
+        AudioServicesPlaySystemSound(self.dismissSound)
         presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ (coordinatorContext) -> Void in
             self.dimmingView.alpha = 0.0
         }, completion: nil)

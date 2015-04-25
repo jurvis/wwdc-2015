@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ContainerViewController: UIViewController, UIPageViewControllerDataSource, UIScrollViewDelegate {
+class ContainerViewController: UIViewController, UIPageViewControllerDataSource, UIScrollViewDelegate, UIPageViewControllerDelegate {
+    var pingSound: SystemSoundID = 0
+
+
     
     var personalProjects: [String: PersonalApp]!
     var hackathonProjects: [String: PersonalApp]!
@@ -19,12 +23,14 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadModel()
+        self.loadAudioEffects()
         
         let screenRect: CGRect =  UIScreen.mainScreen().bounds
         
         self.pageViewController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Vertical, options: nil)
         self.pageViewController?.dataSource = self
         self.pageViewController!.view.frame = self.view.bounds
+        self.pageViewController.delegate = self
         self.pageViewController.view.backgroundColor = UIColor.lightOrangeBackgroundColor()
         
         let viewControllerObject: BaseViewController = self.viewControllerAtIndex(0)
@@ -107,14 +113,21 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
             let bvc: BaseViewController = viewController as! BaseViewController
             var index: Int = bvc.indexNumber!
             
+            
             if (index == 6) {
                 return nil
             }
             
             ++index
+
             
             return self.viewControllerAtIndex(index)
     }
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
+        AudioServicesPlaySystemSound(pingSound)
+    }
+
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 6
@@ -146,5 +159,13 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
         let buuuk : Company = Company(companyName: "buUuk", andCompanyPosition: "iOS Intern", andDateRange: "Mar \'15 - May \'15", andJobDescription: "iOS Developer at buUuk - an app development studio. Developed “ExhibitGuide” as an internal project for clients.", withCompanyLogo: UIImage(named: "buuuk_logo")!)
         self.companies = [carousell.companyName : carousell,
             buuuk.companyName: buuuk]
+    }
+    
+    func loadAudioEffects() {
+
+        
+        let soundPath1 = NSBundle.mainBundle().pathForResource("Glass Up", ofType: "wav")
+        var url1 = NSURL.fileURLWithPath(soundPath1!)
+        AudioServicesCreateSystemSoundID(url1 as! CFURL, &self.pingSound)
     }
 }
