@@ -101,6 +101,7 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         var pageNumber = ceil(scrollView.contentOffset.x / (scrollView.frame.size.width))
         self.pageControl.currentPage = Int(pageNumber)
+
     }
 
     func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
@@ -108,6 +109,7 @@ class CardDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
+
         if scrollView.contentOffset.x >= 130 {
             var offset = ((imageScrollView.frame.size.width + 130.0) / detailScrollView.frame.size.width ) * imageScrollView.contentOffset.x
             detailScrollView.setContentOffset(CGPointMake(offset - 130, 0), animated: false)

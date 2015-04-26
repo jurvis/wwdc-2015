@@ -47,13 +47,7 @@ class HomeViewController: BaseViewController {
         self.backgroundImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI) * (-30/180))
         
 
-        if !Reachability.isConnectedToNetwork() {
-            var alert = UIAlertController(title: "Turn On Wifi/Cellular", message: "This app requires data to display some photos correctly!", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            var alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
-            alert.addAction(alertAction)
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        
         
         self.view.addSubview(self.backgroundImageView)
         self.view.addSubview(swipeLabel)
@@ -61,12 +55,6 @@ class HomeViewController: BaseViewController {
         self.view.addSubview(self.containerView)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"adjustBackgroundImage:", name: "scrollViewScrolled", object: nil)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
     }
     
     

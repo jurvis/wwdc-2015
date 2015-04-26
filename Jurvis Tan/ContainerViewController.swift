@@ -50,6 +50,18 @@ class ContainerViewController: UIViewController, UIPageViewControllerDataSource,
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !Reachability.isConnectedToNetwork() {
+            var alert = UIAlertController(title: "Turn On Wifi/Cellular", message: "This app requires data to display some photos correctly!", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            var alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
     func viewControllerAtIndex(index: Int) -> BaseViewController {
         let vc : BaseViewController
         switch index {

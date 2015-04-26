@@ -13,6 +13,7 @@
 		280FD2211ADFB6450036B8B0 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FD2201ADFB6450036B8B0 /* Company.swift */; };
 		2813437E1AEA2384007BEE71 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813437D1AEA2384007BEE71 /* VideoViewController.swift */; };
 		281343811AEA38FB007BEE71 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 281343801AEA38FB007BEE71 /* YTPlayerView-iframe-player.html */; };
+		2819B9CE1AEC873800BD0CE7 /* Thats It.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2819B9CD1AEC873800BD0CE7 /* Thats It.wav */; };
 		2830923E1AE270BA005AB9A9 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */; };
 		2849F5371AE5C865007A3487 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 280169BA1AE27F7B0017DCAB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		288A50AA1ADE04FC00B9DB7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288A50A91ADE04FC00B9DB7B /* AppDelegate.swift */; };
@@ -112,6 +113,7 @@
 		281343791AEA2311007BEE71 /* JurvisTan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JurvisTan-Bridging-Header.h"; sourceTree = "<group>"; };
 		2813437D1AEA2384007BEE71 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		281343801AEA38FB007BEE71 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		2819B9CD1AEC873800BD0CE7 /* Thats It.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Thats It.wav"; sourceTree = "<group>"; };
 		2830923D1AE270BA005AB9A9 /* PhotoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
 		288A50A41ADE04FC00B9DB7B /* Jurvis Tan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jurvis Tan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288A50A81ADE04FC00B9DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				28E8FB1F1AEBCC1C00A28C78 /* Warp Speed.wav */,
 				28E8FB211AEBCC4500A28C78 /* Close The Window.wav */,
 				28E8FB231AEBCC6400A28C78 /* Glass Up.wav */,
+				2819B9CD1AEC873800BD0CE7 /* Thats It.wav */,
 				281343791AEA2311007BEE71 /* JurvisTan-Bridging-Header.h */,
 				28A5DF501AE9F5E400169A96 /* YTPlayerView */,
 				28E499B11AE6617B00AA0C65 /* Mercury-TextG1Roman.otf */,
@@ -445,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2819B9CE1AEC873800BD0CE7 /* Thats It.wav in Resources */,
 				28E499B81AE6618D00AA0C65 /* Mercury-TextG1Roman.otf in Resources */,
 				28E499B91AE6618D00AA0C65 /* WhitneyHTF-Bold.otf in Resources */,
 				28E8FB221AEBCC4500A28C78 /* Close The Window.wav in Resources */,

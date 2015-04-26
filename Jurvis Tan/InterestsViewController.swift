@@ -8,8 +8,11 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
 
-class InterestsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class InterestsViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+    var openSound: SystemSoundID = 0
+    var swipeSound: SystemSoundID = 1
     var smallLayout: UICollectionViewFlowLayout!
     var largeLayout: UICollectionViewFlowLayout!
     
@@ -18,10 +21,11 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
     var titleHeader: UILabel!
     var titleSubtitle: UILabel!
     var photoGallery: UICollectionView?
-    
+    var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudioEffects()
         let screenRect = UIScreen.mainScreen().bounds
 
         self.view.backgroundColor = UIColor.greyTextColor()
@@ -69,12 +73,16 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         self.titleSubtitle.sizeToFit()
         self.titleSubtitle.frame = CGRectMake((screenRect.size.width - self.titleSubtitle.frame.size.width) / 2, CGRectGetMaxY(self.titleHeader.frame) + 40, self.titleSubtitle.frame.size.width, self.titleSubtitle.frame.size.height)
         
-
+        spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+        spinner.frame = CGRectMake(0, 0, 100, 100);
+        spinner.center = self.photoGallery!.center
+        spinner.alpha = 0.0
     
         self.view.addSubview(self.titleSubtitle)
         self.view.addSubview(self.titleHeader)
         self.view.addSubview(titleView)
         self.view.addSubview(self.photoGallery!)
+        self.view.addSubview(spinner)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -84,13 +92,44 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         }
     }
     
+    func setupAudioEffects() {
+        let soundPath = NSBundle.mainBundle().pathForResource("Warp Speed", ofType: "wav")
+        var url = NSURL.fileURLWithPath(soundPath!)
+        AudioServicesCreateSystemSoundID(url as! CFURL, &self.swipeSound)
+        
+        
+        let soundPath1 = NSBundle.mainBundle().pathForResource("Thats It", ofType: "wav")
+        var url1 = NSURL.fileURLWithPath(soundPath1!)
+        AudioServicesCreateSystemSoundID(url1 as! CFURL, &self.openSound)
+    }
+    
     func getImages() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.spinner.alpha = 1.0
+        }) { (finished) -> Void in
+            if finished {
+                self.spinner.startAnimating()
+            }
+        }
+        
+        
         Alamofire.request(.GET, "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=c3f5f9e2466cc5cd0d4e0992237278c8&photoset_id=72157651966287326&user_id=64901454%40N03&format=json&nojsoncallback=1")
-            .responseJSON { (_, _, JSON, _) in
-                self.photoArray = JSON?.valueForKeyPath("photoset.photo") as! Array
-                self.photoGallery?.reloadData()
+            .responseJSON { (_, _, JSON, error) in
+                if (error == nil) {
+                    self.photoArray = JSON?.valueForKeyPath("photoset.photo") as! Array
+                    self.photoGallery?.reloadData()
+                } else {
+                    var alert = UIAlertController(title: "Turn On Wifi/Cellular", message: "This app requires data to display some photos correctly!", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    var alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                    alert.addAction(alertAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
+
+                }
         }
     }
+    
+// MARK: UICollectionViewDataSourceDelegate Methods
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -105,25 +144,30 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
         cell.alpha = 0.0
         let photo: NSDictionary = self.photoArray[indexPath.row] as! NSDictionary
         
-        let url = self.getPhotoUrl(photo, forSize: "c")
+        let url = self.getPhotoUrl(photo, forSize: "b")
         let request = NSURLRequest(URL: url)
         
         cell.imageView.setImageWithUrlRequest(request, placeHolderImage: UIImage(named: "image_placeholder"), success: { (request, response, image) -> Void in
                 cell.imageView.image = image
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     cell.alpha = 1.0
+                    self.spinner.alpha = 0.0
                 })
+                self.spinner.stopAnimating()
+            
             }, failure: { (request, response, error) -> Void in
-                //code
             })
         
         return cell
     }
+
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         var selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
         var toLayout = self.smallLayout == collectionView.collectionViewLayout ? self.largeLayout : self.smallLayout
+        
+        AudioServicesPlaySystemSound(self.openSound)
         
         self.photoGallery?.setCollectionViewLayout(toLayout, animated: true, completion: { (finished) -> Void in
             if toLayout == self.largeLayout {
@@ -132,6 +176,13 @@ class InterestsViewController: BaseViewController, UICollectionViewDataSource, U
                 collectionView.pagingEnabled = false
             }
         })
+    }
+    
+    // MARK: ScrollViewDelegate Methods
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if self.largeLayout == photoGallery?.collectionViewLayout { // only play sound when cells are expanded
+            AudioServicesPlaySystemSound(swipeSound)
+        }
     }
     
     func getPhotoUrl(photo: NSDictionary, forSize size: NSString) -> NSURL {
