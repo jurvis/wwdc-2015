@@ -22,9 +22,8 @@ class VideoViewController: UIViewController {
         var videoPlayerHeight = (9/16) * cardViewSize.width
         self.videoPlayer = YTPlayerView(frame: CGRectMake(0, 0, cardViewSize.width, videoPlayerHeight))
         self.videoPlayer.frame.origin = CGPointMake(0, (cardViewSize.height - videoPlayerHeight) / 2)
-        self.videoPlayer.loadWithVideoId("CICMxwgm274")
+        self.videoPlayer.loadWithVideoId("n-qDcaVnL_4")
 
-        
         self.view.addSubview(self.videoPlayer)
     }
 
