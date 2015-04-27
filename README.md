@@ -1,8 +1,12 @@
 # WWDC 2015 Resume App
 My app for the 2015 submission for the WWDC Scholarship
 
+Learned Swift as I went writing this app - if anything this is the worst possible example of a well-written Swift app.
 
-## Libraries/External Code Used
-[Alamofire](https://github.com/Alamofire/Alamofire)
-[YTPlayerView](https://github.com/youtube/youtube-ios-player-helper)
-[UIImageView+AFNetworking.swift](https://github.com/namanhams/Swift-UIImageView-AFNetworking)
+## External Libraries/Code Used
+* [Alamofire](https://github.com/Alamofire/Alamofire)
+* [YTPlayerView](https://github.com/youtube/youtube-ios-player-helper)
+* [UIImageView+AFNetworking.swift](https://github.com/namanhams/Swift-UIImageView-AFNetworking)
+
+## Other Links
+* [YouTube Video](https://youtu.be/t19pO05jzSQ)
