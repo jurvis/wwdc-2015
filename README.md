@@ -1,5 +1,6 @@
 # WWDC 2015 Resume App
 Result: Rejected
+
 My app for the 2015 submission for the WWDC Scholarship
 
 Learned Swift as I went writing this app - if anything, this is the worst possible example of a well-written Swift app.
